@@ -16,6 +16,8 @@ Quiz name 3
 -
 ```
 
+Make sure not to use duplicate Quiz names.
+
 To create the corresponding quizzes, each question and answer pair should be delimited with `'--'`, and the question and answer within that sperated by a `'-'`. For example...
 
 In a file named `Quiz name 1.txt`:
