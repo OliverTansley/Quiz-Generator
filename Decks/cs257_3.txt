@@ -1,65 +1,65 @@
---
+==
 what is the average access time assuming cache is accessed first?
--
+=
 t_a = t_c + (1-h)t_m
---
+==
 what values of h (hit ratio) will give good performance
--
+=
 0.7 to 0.9
---
+==
 name the three cache mapping functions
--
+=
 direct,associative,set associative
---
+==
 describe direct cache mapping
--
+=
 Maps each block of main memory into only one possible cache line
---
+==
 describe associative cache mapping
--
+=
 permits each main memory block to be loaded into any line of cache
---
+==
 how is a memory address interpreted by associative mapping logic
--
+=
 a tag, and a word feild, all lines must be examined for a matching tag
---
+==
 describe set associative mapping
--
+=
 a compromise that exhibits the strenghts of both, words can be mapped to a set of cache lines
---
+==
 what are the purpose of tags in cache mapping
--
+=
 to compare cache lines to ensure we have found the correct line (detect a hit)
---
+==
 what is the advantage of direct mapping
--
+=
 it is simple and inexpensive to implement
---
+==
 what is the disadvantage of direct mapping
--
+=
 if references are made to two blocks that map to the same line, the hit ratio is low (thrashing)
---
+==
 what is victim cache?
--
-an additional fully associative cache, between 4-16 cache lines, residing between L1 cache and next level
---
+=
+an additional fully associative cache, between 4=16 cache lines, residing between L1 cache and next level
+==
 what is the advantage of fully associative cache
--
+=
 overcomes the thrashing of direct mapping cache, as two blocks wont be mapped to the same cache line
---
+==
 what is the disadvantage of fully associative cache 
--
+=
 Complex circuitry is required to examine every tag
---
+==
 what are the different caches in harvard architecture
--
+=
 Instruction cache (read only), Data cache (often larger cause less predictable)
---
+==
 what is the principle of inclusion?
--
+=
 on an L2 cache miss, new data is written to L2 and L1 cache.
---
+==
 when must cache be coherant
--
+=
 input/output transfers may operate on main memory, multiple processors share the same memory
---
+==
