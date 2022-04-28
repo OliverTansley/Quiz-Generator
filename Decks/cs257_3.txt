@@ -63,3 +63,7 @@ when must cache be coherant
 -
 input/output transfers may operate on main memory, multiple processors share the same memory
 --
+what are the two methods for maintaining consistency in cache?
+-
+Write through, write back
+--
