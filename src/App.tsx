@@ -11,8 +11,6 @@ import {
   Text,
   Spacer,
   Box,
-  useColorMode,
-  DarkMode,
 } from "@chakra-ui/react";
 import Card from "./Components/Card";
 import theme from "./theme";
@@ -31,11 +29,13 @@ function App() {
 
   let [currentTopic, setCurrentTopic] = useState("");
 
-  let topics: string[] | undefined = loadFile("/Decks/Summary.txt")
+  let topics: string[] | undefined = loadFile(
+    "/Quiz-Generator/Decks/Summary.txt"
+  )
     .split("-")
     .filter((item) => item !== "");
 
-  let cards = loadFile("/Decks/" + currentTopic + ".txt")
+  let cards = loadFile("/Quiz-Generator/Decks/" + currentTopic + ".txt")
     .split("--")
     .filter((item) => item !== "");
 

@@ -1,6 +1,6 @@
 import { HStack, Text, IconButton, Flex, VStack } from "@chakra-ui/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type Props = {
   cards: string[];
@@ -8,9 +8,6 @@ type Props = {
 };
 
 const Card = (props: Props) => {
-  let [currentCard, setCurrentCard] = useState(0);
-  let [q, setQ] = useState(true);
-
   let changeCard: Function = (change: number) => {
     if (
       currentCard + change < 0 ||
@@ -20,6 +17,11 @@ const Card = (props: Props) => {
     }
     setCurrentCard(currentCard + change);
   };
+
+  let [currentCard, setCurrentCard] = useState(0);
+  let [q, setQ] = useState(true);
+
+  useEffect(() => setCurrentCard(0), [props.cards]);
 
   return (
     <VStack>
