@@ -67,3 +67,16 @@ what are the two methods for maintaining consistency in cache?
 -
 Write through, write back
 --
+Explain write through
+-
+Write operations are repeated to main memory (normally at the same time) main memory access dominates write time.
+--
+what is the average access time for write through?
+-
+t_a = t_c + (1-h)t_b+w(t_m + t_c) => (1-w)t_c + (1-h+w)t_m
+t_b = t_c, t_b block to cache transfer, w = write references ratio
+--
+what is (t_m - t_c)?
+-
+the additional time to write the word to main memory (on a hit or a miss),given write operations occur simultaneously
+--
