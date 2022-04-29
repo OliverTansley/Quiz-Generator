@@ -156,3 +156,13 @@ explain prefetching
 -
 if an indirect cycle is caused, we can prefetch the next Instruction at (pc+1) whilst the new addr is being moved into the MAR.
 --
+what are micro-operations
+-
+smaller instructions made up of a combination of control signals
+--
+name the three purposes of micro-instructions
+-
+Transfer data between registers
+Transfer data from registers to busses
+Perform arithmetic and logical operations
+--

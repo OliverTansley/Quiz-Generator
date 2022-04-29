@@ -1,4 +1,6 @@
 -
-cs257_Cache memory
+CS257 Cache memory
 -
-cs257_7
+CS257 Processor Organisation
+-
+CS257 Processor pipelining and performance

@@ -1,0 +1,50 @@
+--
+what are MIPS
+-
+Millions of Instructions Per Second
+--
+What does the performance of a parrallel system depend on
+-
+Degree of parrallelism,Interconnection structure,main memory architecture, degree of instruction parrallelism
+--
+what are FLOPS
+-
+Floating point Operations Per Second
+--
+why is the maximum performance of n processors with p performance never achieved
+-
+Non highly parrallel algorithms, Inter processors communication delays
+--
+what is speedup
+-
+speed before change/speed after change
+--
+how do you calculate processor utilisation/efficiency
+-
+speedup/number of cores
+--
+What is a programs degree of parrallelism
+-
+The number of cores which allow the program to reach its maximum speedup and efficiency or maximum level of parrallelism that can be exploited by the program 
+--
+What is the average throughput of a program with both vector and scalar operations
+-
+1/b = f/b_s + (1-f)/b_v
+--
+what is the execution time for 1 N component vector operation
+-
+T_v = N/b_v
+--
+what is the execution time for 1 scalar operation
+-
+T_s = 1/b_s
+--
+Assuming T_v = T_0 + (NT_s)/n what is the average throughput
+-
+ignore T_0 when N is large
+FINISH CARD
+--
+what is amdahls law
+-
+speedup = n/(1 + (n-1)f)
+--
