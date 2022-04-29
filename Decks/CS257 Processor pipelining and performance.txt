@@ -48,3 +48,40 @@ what is amdahls law
 -
 speedup = n/(1 + (n-1)f)
 --
+What is the problem with Instruction Fetch - Execute pipelining
+-
+memory contention between both units (indirect address cycle)
+--
+what is a possible solution to the IF-E pipelining problem
+-
+Use banked/interleaved memory to seperate instruction and data into different memory circuits
+--
+describe Asynchronous pipelining
+-
+Uses 'handshaking signals' to indicate completion/ready for passing data
+most flexible allowing variable length buffers between stages
+--
+describe synchronous pipelining
+-
+One timing signal is used for all stages in the pipeline, determined by the slowest stage
+IF-E pipelines use synchronous timing due to simplicity
+Incorparate latches known as staging registers
+--
+what are the three 'pipeline Hazards'
+-
+structural hazards (resource conflicts)
+Control hazards (procedural dependancies)
+Data Hazards
+--
+Give an example of a structural hazard and its possible solutions
+-
+Example: 2 stages wishing to use the same memory port in the same clock cycle
+Use interleaved memory, stages have seperate banks
+Fetch more than one data item at a time, freeing the use of memory at other times
+--
+Give an example of a Control hazard 
+-
+If a 5-stage pipeline, with a 10ns clock period is stalled (emptied) after every 10 instructions, 
+then the average instruction processing time for 10 instructions is 14ns Implying a 40% increase 
+in instruction processing time
+--
