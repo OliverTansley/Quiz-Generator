@@ -1,0 +1,158 @@
+--
+describe the function of the CPU
+-
+Repeat the Instruction cycle, which can take multiple CPU cycles
+--
+name the CPU registers
+-
+ALU,CU,PC,IR,MAR,MDR
+--
+describe the structure of a machine Instruction
+-
+Opcode (Instruction), Source operand reference (input to Instruction), result operand reference (output of Instruction), Next Instruction reference
+--
+what are the two different types of registers
+-
+User visible registers and, control and status registers
+--
+What is a user visible register
+-
+registers used by low level programmers to reduce access to memory
+--
+what are 'control and status' registers
+-
+Used by the control unit to maintain CPU operations, and by priviledged OS programs to control execution of programs
+--
+Name the user visible registers
+-
+data registers, address registers, index registers, stack pointer, register, and condition code register
+--
+Name the 'control and status' registers
+-
+PC, IR, MAR, and MBR
+--
+describe the indirect cycle
+-
+when Instructions involve operand(s) which require an indirect memory access, the indirect cycle is used to make the 2nd access into memory
+--
+describe the steps of the indirect cycle
+-
+the first access to memory is made which retrieves and address
+this address is passed from the memory buffer register to the MAR
+and a second memory access is made to retrieve the real data
+--
+What is the promise of Instruction pipelining
+-
+New inputs to an Instruction can be admitted to the pipeline before old ones are outputted
+--
+name the tasks of the control unit
+-
+generate fetch control signal sequence [fetch]
+observe opcode and output correct control signal sequence [decode and execute]
+--
+what are the two design methodologies for control unit design
+-
+Hardwired random logic, Microprogrammed
+--
+describe a Hardwired control unit
+-
+A sequencer is connected to the cpu clock, it iterates through combinational logic which produces the correct control signals depending on the Instruction
+--
+Name each component of a Hardwired control unit
+-
+Instruction decoder,random logic signal generator,sequencer,fetch execute flip flop (and the start_fetch,start_execute signals).
+--
+what is the advantage of a Hardwired control unit
+-
+its very fast
+--
+what are the disadvantages of a Hardwired control unit
+-
+complex hardware (difficult to design and test)
+inflexible (cannot redesign after implementation)
+long desing time
+--
+describe a Microprogrammed control unit
+-
+Make use of a Microprogram memory, store each control sequence in Microprogram memory
+--
+name the components of a Microprogrammed control unit
+-
+REDO THIS CARD (line 81)
+--
+what is a Microprogram routine
+-
+a description of how to generate the CU outputs for one Macro-Instruction
+--
+what is a microaddress
+-
+a location within Microprogram memory
+--
+what is a Micro PC
+-
+the CU’s internal program counter points to next addr in Microprogram memory
+--
+what is a Micro IR
+-
+The CU’s internal microinstruction register is used to hold the current microinstruction
+--
+what is a Microinstruction
+-
+Holds the CU output values and other fields to control the microprogram flow
+--
+what are the three posibilities for the next microaddress
+-
+Current microaddress +1
+Microaddress given in microIR Next microaddress field
+Microaddress of microroutine for next opcode - output from OTOA circuit
+--
+What factors affect the choice of next microaddress
+-
+Next μPC calc type field in μIR
+BZC field in μIR
+Z input to CU
+--
+describe a Microprogram execution under normal operation
+-
+microPc is initialised to microaddress pointing to start of the routine
+each microinstruction sets the values of the Cu outputs, generating the control sequence
+after each microinstruction is executed, the microPC is incremented by 1
+Stepping throught the Instructions in sequence
+--
+describe the last microfetch operation
+-
+the macro IR has the newly fetched Instruction which is fed to the CU
+the OTOA takes this Instruction and maps it to the corresponding microroutine
+the microPC calc signal Instructs the CU to take the address from the OTOA instead of incrementing the previous addr
+--
+describe the last Instruction of a microroutine
+-
+the microPC calc feild is set to take the addr from the microIR next Instruction feild
+this is used by CUs to point the microPC back to the fetch routine to fetch the next macro Instruction
+--
+describe a conditional branch in a microprogram
+-
+the bzc feild is set, causing the next microaddress to be generated from one of two alternatives depending on if the z feild is set 
+the address is determined from incrementing the previous addr if z is not set or from the IR next address register if otherwise.
+--
+what are the advantages of a microCU
+-
+Easier to design and implement,design flexibility allows family of CUs to be built,hardware is much simpler, can be reprogrammed with new Instructions.
+--
+what is the disadvantage of a microCU
+-
+slower than Hardwired random logic
+--
+describe the CPU fetch sequence
+-
+Program counter clocked onto MAR
+mar value placed onto addr bus
+CU issues read
+result from memory goes onto databus to mbr
+PC incremented
+mbr moved to ir
+--
+explain prefetching
+-
+if an indirect cycle is caused, we can prefetch the next Instruction at (pc+1) whilst the new addr is being moved into the MAR.
+--
