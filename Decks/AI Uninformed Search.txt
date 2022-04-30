@@ -1,0 +1,113 @@
+--
+what is a problem solving agent
+-
+a goal based agent that will determine sequences of actions that lead to desirable states
+--
+what are the four steps a problem solving agent must take
+-
+goal formulation: identify goal given current situation
+problem formulation: identify permissable actions/operators and states to consider
+Search: find sequence of actions to achieve goal
+Execution: perform the actions in the solution
+--
+what are the two types of problem solving
+-
+offline: complete knowledge of problem and solution
+online: involves acting without complete knowledge of problem and solution
+--
+what are the dimensions of a typical State-space search
+-
+Modularity: flat
+Representation: states
+Planning horizon: indefinite stage
+Sensing Uncertainty: fully observable
+Effect Uncertainty: deterministic
+Preference: goals
+Number of agents: single agent
+Learning: knowledge is given
+Computational limits: perfect rationality
+Interaction: offline
+--
+what are the different types of problem
+-
+deterministic, fully observable -> single-state problem
+deterministic, partially observable -> multiple state problem
+stochastic partially observable -> contingency problem
+unknown state space -> exploration problem
+--
+describe a single state problem
+-
+sensors tell agent current state, and it knows what its actions do
+means that it knows what state it will be in after performing any actions
+--
+describe a multiple state problem
+-
+limited access to state but knows what its actions do
+can determine a set of states resulting from an action
+instead of single state the agent must manipulate sets of states
+--
+describe a contingency problem
+-
+dont know the current state, or the resulting state of an action
+must use sensors during Execution
+solution is a tree with branches of contingencies
+often interleave search and Execution
+--
+describe an exploration problem
+-
+agent doesnt know what its actions will do (knowledge is learnt)
+e.g. get to Coventry without a map
+--
+what does a state space problem consist of 
+-
+a set of states
+a subset of states called start states
+a set of actions
+an action function: given a state and an action returns a new state
+a set of goal states, specified as function, goal(s)
+a criterion that specifies the quality of an acceptable solution
+--
+how is abstraction used in state space search
+-
+the states operators, and solutions will be abstracted to simplify the problem improving execution time
+--
+describe a state space graph
+-
+A directed graph compromising of N nodes (states) and a set A of ordered pairs of nodes
+a solution is a path from a start node to a goal node
+--
+what is a state
+-
+a Representation of the world
+--
+what is a node
+-
+a data structure compromising part of the search tree
+--
+what feilds does a node have
+-
+state,parent,children,depth,path cost
+--
+what is the frontier
+-
+Nodes of the tree search waiting to be expanded
+--
+How do we evaluate search strategies
+-
+completeness: do we always find a solution
+optimality: always find a least cost solution
+time complexity: number of nodes expanded
+space complexity: maximum number of nodes in Memory
+--
+what are the two tree search strategies
+-
+depth first, and breadth first
+--
+what are the qualities of the breadth first tree search 
+-
+complete, Time O(b^d), Space O(b^d), optimal if cost non-decreasing function of depth not optimal otherwise
+--
+what are the qualities of the depth first tree search
+-
+incomplete, Time O(bm), space O(bm), not optimal
+--
