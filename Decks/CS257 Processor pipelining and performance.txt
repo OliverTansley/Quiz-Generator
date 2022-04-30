@@ -81,7 +81,58 @@ Fetch more than one data item at a time, freeing the use of memory at other time
 --
 Give an example of a Control hazard 
 -
-If a 5-stage pipeline, with a 10ns clock period is stalled (emptied) after every 10 instructions, 
-then the average instruction processing time for 10 instructions is 14ns Implying a 40% increase 
-in instruction processing time
+branch and jump instructions (cause the pipeline to flush)
+--
+Name the methods of mitigating pipeline control hazards
+-
+Instruction pre-fetch buffers, pipeline freeze, static/dynamic prediction
+--
+what is an instruction pre-fetch buffer
+-
+memory which holds one of the possible sequences of instructions that may execute after a branch (assumes interleaved memory)
+branch unit BrU is used to execute branch instruction as soon as is fetched, the 'incorrect' instructions are discarded
+--
+explain the pipeline freeze strategy
+-
+on a branch instruction freeze the pipeline, to avoid wasting time flushing it, simple to implement but poor performance
+--
+explain static prediction
+-
+hardwired circuit forces to predict to either take branch or not, 60% of branches are taken so this could be good for performance
+not taking branches avoids losing pipeline cycles therefore could be better for performance
+--
+Name the 3 types of dynamic prediction
+-
+predict on: branch instruction characteristics, target addr characteristics, branch history
+--
+describe prediction on branch instruction characteristics
+-
+provide a bit in the branch instruction (set by low-level
+programmer or compiler) to indicate the most likely outcome of branch, e.g., if loop is being programmed,
+set bit to ‘Take Branch’
+--
+describe Predict on Target Address Characteristics
+-
+short branches and backward branches are characteristics of loops in a program and are usually taken, while long branches are used for major
+changes in program control and are usually not taken
+--
+describe Predict on Branch History
+-
+if a bit is set or reset on the outcome of an execution, that bit is a good predictor of the next execution
+--
+describe what a data hazard is
+-
+if data is read which is about to be updated by another instruction in the pipeline (incorrect data fetched)
+--
+what determines the speed of a synchronous pipeline
+-
+the slowest stage in the pipeline (usually execution unit)
+--
+how do you work out efficiency of a pipeline
+-
+(busy area)/(total area)
+--
+how do you work out the speed increase of a pipeline
+-
+nN/(N+ (n-1)), n is number of stages and N is the number of instructions executed
 --
