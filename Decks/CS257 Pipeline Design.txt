@@ -1,0 +1,70 @@
+--
+What features of pipelines make them difficult to Design and optimise
+-
+feedback, unequal clock stages
+--
+what affect does feedback and unequal clock stages have on pipelines
+-
+initiations may not always be accepted at the start of a pipeline, as collisions could occur
+--
+describe a reservation table
+-
+grid of stages against discrete time, where x's mark occupation of stages at those discrete intervals
+--
+what indicates collisions in a reservation table
+-
+the distance between two occupied timeslots in the same stage
+--
+what is a collision vector
+-
+a binary value that shows us after how many stages there will be a col(C_0 = 1 always).
+e.g. if a collision occurs if an initiation occurs after 3 and 5 cycles from the previous initiation then C = 101001
+--
+what is the initial collision vector
+-
+the state of the pipleine after the first initiation
+--
+what is latency
+-
+the clock cycles between 2 pipeline initiations
+--
+what is average latency
+-
+the average number of clock cycles between initiations over some repeating cycle
+--
+what is minimum average latency
+-
+the smallest possible latency considering all possible sequences of initiations (the goal for optimum design)
+--
+what is a pipeline state diagram
+-
+diagram of linked pipline states, identified by status vectors. NB. Initially, with an empty pipeline, the status vector is 00..00
+(remember status vector != collision vector)
+--
+what is the algorithm for generating a pipeline state diagram
+-
+If the shifted states vector has C_0 = 1, no new initiation is possible
+if the shifted status vector has C_0 = 0, there are two possibilities
+(i) initiation is not taken 
+(ii) initiation is taken new status vector is the logical OR of the shifted vector and the initial collision vector
+--
+what is a reduced state diagram
+-
+a state diagram which only shows states resulting from a taken initiation
+--
+what is the 'greedy strategy' in pipeline design
+-
+always taking initiations when C_0 = 0, not always minimum average latency but usually close
+--
+why do we only need to consider simple cycles in pipeline design
+-
+it has been shown that there is always a simple cycle shorter than the complex cycles of any given pipeline
+--
+what are the bounds of minimum average latency
+-
+most X's in row <= MAL <= greedy cycle AL <= number of 1's in collision vector
+--
+what is the strategy for further reducing latency in a pipeline
+-
+add delays to reduce the chance of collision, reducing minimum average latency
+--
