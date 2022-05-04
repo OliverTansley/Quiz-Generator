@@ -8,6 +8,9 @@ type Props = {
 };
 
 const Card = (props: Props) => {
+  let [currentCard, setCurrentCard] = useState(0);
+  let [q, setQ] = useState(true);
+
   let changeCard: Function = (change: number) => {
     if (
       currentCard + change < 0 ||
@@ -17,9 +20,6 @@ const Card = (props: Props) => {
     }
     setCurrentCard(currentCard + change);
   };
-
-  let [currentCard, setCurrentCard] = useState(0);
-  let [q, setQ] = useState(true);
 
   useEffect(() => setCurrentCard(0), [props.cards]);
 
@@ -52,13 +52,15 @@ const Card = (props: Props) => {
             setQ(!q);
           }}
         >
-          <Text fontSize={"4xl"} color={"black"}>
-            {!props.cards[currentCard]
-              ? null
-              : q
-              ? props.cards[currentCard].split("-")[0]
-              : props.cards[currentCard].split("-")[1]}
-          </Text>
+          {!props.cards[currentCard] ? null : q ? (
+            <Text noOfLines={4} fontSize={"4xl"} color={"black"}>
+              {props.cards[currentCard].split("\n-\n")[0]}
+            </Text>
+          ) : (
+            <Text noOfLines={12} fontSize={"2xl"} color={"black"}>
+              {props.cards[currentCard].split("\n-\n")[1]}
+            </Text>
+          )}
         </Flex>
         <IconButton
           variant={"ghost"}
@@ -69,7 +71,7 @@ const Card = (props: Props) => {
           icon={<ArrowRightIcon boxSize={8} />}
         />
       </HStack>
-      <Text color={"gray"} paddingTop={8} fontSize={"xl"}>
+      <Text color={"gray"} paddingTop={8} fontSize={"2xl"}>
         {currentCard + 1}/{props.cards.length}
       </Text>
     </VStack>

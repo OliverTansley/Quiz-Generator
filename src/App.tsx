@@ -10,10 +10,11 @@ import {
   VStack,
   Text,
   Spacer,
-  Box,
+  IconButton,
 } from "@chakra-ui/react";
 import Card from "./Components/Card";
 import theme from "./theme";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 function App() {
   function loadFile(filePath: any) {
@@ -28,6 +29,7 @@ function App() {
   }
 
   let [currentTopic, setCurrentTopic] = useState("");
+  let [showTopics, setShowTopics] = useState(true);
 
   let topics: string[] | undefined = loadFile(
     "/Quiz-Generator/Decks/Summary.txt"
@@ -36,75 +38,104 @@ function App() {
     .filter((item) => item !== "");
 
   let cards = loadFile("/Quiz-Generator/Decks/" + currentTopic + ".txt")
-    .split("--")
+    .split("--\n")
     .filter((item) => item !== "");
 
   return (
     <ChakraProvider theme={theme}>
-      <VStack h={"100%"}>
-        <Box w={"100vw"} bg="orange.600" p={2}>
-          <HStack paddingLeft={6} paddingRight={6}>
-            <Text color={"white"} fontSize={"6xl"}>
-              CSE Flash Cards
-            </Text>
-            <Spacer />
-          </HStack>
-        </Box>
+      <HStack h={"100vh"} spacing={0}>
+        {!showTopics ? null : (
+          <VStack
+            bg={"#e6e6e6"}
+            p={4}
+            paddingBottom={0}
+            boxShadow={
+              "rgba(50, 50, 93, 0.25) 0px 0px 16px -2px inset, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px inset"
+            }
+            h={"100%"}
+            minW={"356px"}
+            w={"356px"}
+            overflowY={"scroll"}
+            alignItems={"flex-start"}
+          >
+            <Text fontSize={"4xl"}>Topics:</Text>
 
-        <HStack
-          w={"100%"}
-          h={"100px"}
-          p={4}
-          overflowX={"hidden"}
-          alignItems={"flex-start"}
-          justifyContent={"center"}
-          _hover={{ overflowX: "scroll" }}
-        >
-          {topics
-            ? topics.map((topic: string) => {
-                return currentTopic === topic ? (
-                  <Button
-                    h={"50px"}
-                    w={"90px"}
-                    minH={"50px"}
-                    minW={"90px"}
-                    colorScheme={"orange"}
-                    onClick={() => {
-                      setCurrentTopic(topic);
-                    }}
-                  >
-                    {topic}
-                  </Button>
-                ) : (
-                  <Button
-                    h={"50px"}
-                    w={"90px"}
-                    minH={"50px"}
-                    minW={"90px"}
-                    colorScheme={"orange"}
-                    variant={"outline"}
-                    onClick={() => {
-                      setCurrentTopic(topic);
-                    }}
-                  >
-                    {topic}
-                  </Button>
-                );
-              })
-            : null}
-        </HStack>
-        <Divider />
-        <Spacer />
-        {currentTopic !== "" ? (
-          <VStack p={32}>
-            <Card cards={cards} q={true} />
+            {topics
+              ? topics.map((topic: string) => {
+                  return currentTopic === topic ? (
+                    <Button
+                      minH={"50px"}
+                      fontSize="14px"
+                      w={"300px"}
+                      noOfLines={3}
+                      bgColor={"orange.400"}
+                      _hover={{ background: "orange.500" }}
+                      title={topic}
+                      colorScheme={"orange"}
+                      onClick={() => {
+                        setCurrentTopic(topic);
+                        setShowTopics(false);
+                      }}
+                    >
+                      {topic}
+                    </Button>
+                  ) : (
+                    <Button
+                      fontSize="14px"
+                      minH={"50px"}
+                      noOfLines={3}
+                      w={"300px"}
+                      colorScheme={"orange"}
+                      title={topic}
+                      variant={"outline"}
+                      onClick={() => {
+                        setCurrentTopic(topic);
+                        setShowTopics(false);
+                      }}
+                    >
+                      {topic}
+                    </Button>
+                  );
+                })
+              : null}
           </VStack>
-        ) : (
-          <Text color={"gray.300"} paddingTop={8} fontSize={"6xl"}>
-            Select A topic!
-          </Text>
         )}
-      </VStack>
+        <Spacer />
+        <VStack w={"100%"} p={4} h={"100%"}>
+          <HStack w={"100%"}>
+            <IconButton
+              aria-label="toggleTopic"
+              icon={
+                showTopics ? (
+                  <ChevronLeftIcon boxSize={8} />
+                ) : (
+                  <ChevronRightIcon boxSize={8} />
+                )
+              }
+              variant={"ghost"}
+              onClick={() => setShowTopics(!showTopics)}
+            />
+          </HStack>
+          <Spacer />
+          {currentTopic !== "" ? (
+            <VStack justifyContent={"center"} h={"100vh"} p={16}>
+              <Text fontSize={"4xl"} color={"gray.400"}>
+                {currentTopic}
+              </Text>
+              <Divider />
+              <Spacer />
+              <Card cards={cards} q={true} />
+              <Spacer />
+            </VStack>
+          ) : (
+            <Text color={"gray.300"} paddingTop={8} fontSize={"6xl"}>
+              Select A topic!
+            </Text>
+          )}
+          <Spacer />
+        </VStack>
+        <Spacer />
+      </HStack>
     </ChakraProvider>
   );
 }

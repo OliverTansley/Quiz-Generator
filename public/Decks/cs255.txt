@@ -1,9 +1,0 @@
---
-what is a rational agent?
--
-an agent that makes the decision which is expected to have the best outcome based on some notion of cost 
---
-what is ai
--
-a module i study
---
