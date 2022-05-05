@@ -19,3 +19,9 @@ CS261 Software Development Methodologies
 -
 CS261 Agile Methodologies
 -
+CS261 Requirements Analysis
+-
+CS261 Early Team Organisation
+-
+CS261 System Design 1
+-

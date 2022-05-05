@@ -11,6 +11,8 @@ import {
   Text,
   Spacer,
   IconButton,
+  useDisclosure,
+  Slide,
 } from "@chakra-ui/react";
 import Card from "./Components/Card";
 import theme from "./theme";
@@ -29,7 +31,7 @@ function App() {
   }
 
   let [currentTopic, setCurrentTopic] = useState("");
-  let [showTopics, setShowTopics] = useState(true);
+  const { isOpen, onToggle } = useDisclosure();
 
   let topics: string[] | undefined = loadFile(
     "/Quiz-Generator/Decks/Summary.txt"
@@ -44,7 +46,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <HStack h={"100vh"} spacing={0}>
-        {!showTopics ? null : (
+        <Slide direction="left" in={isOpen} style={{ zIndex: 10 }}>
           <VStack
             bg={"#e6e6e6"}
             p={4}
@@ -58,8 +60,16 @@ function App() {
             overflowY={"scroll"}
             alignItems={"flex-start"}
           >
-            <Text fontSize={"4xl"}>Topics:</Text>
-
+            <HStack w={"100%"} paddingRight={4}>
+              <Text fontSize={"4xl"}>Topics:</Text>
+              <Spacer />
+              <IconButton
+                aria-label="toggleTopic"
+                icon={<ChevronLeftIcon boxSize={8} />}
+                variant={"ghost"}
+                onClick={() => onToggle()}
+              />
+            </HStack>
             {topics
               ? topics.map((topic: string) => {
                   return currentTopic === topic ? (
@@ -74,7 +84,7 @@ function App() {
                       colorScheme={"orange"}
                       onClick={() => {
                         setCurrentTopic(topic);
-                        setShowTopics(false);
+                        onToggle();
                       }}
                     >
                       {topic}
@@ -90,7 +100,7 @@ function App() {
                       variant={"outline"}
                       onClick={() => {
                         setCurrentTopic(topic);
-                        setShowTopics(false);
+                        onToggle();
                       }}
                     >
                       {topic}
@@ -99,21 +109,15 @@ function App() {
                 })
               : null}
           </VStack>
-        )}
+        </Slide>
         <Spacer />
         <VStack w={"100%"} p={4} h={"100%"}>
           <HStack w={"100%"}>
             <IconButton
               aria-label="toggleTopic"
-              icon={
-                showTopics ? (
-                  <ChevronLeftIcon boxSize={8} />
-                ) : (
-                  <ChevronRightIcon boxSize={8} />
-                )
-              }
+              icon={<ChevronRightIcon boxSize={8} />}
               variant={"ghost"}
-              onClick={() => setShowTopics(!showTopics)}
+              onClick={() => onToggle()}
             />
           </HStack>
           <Spacer />
