@@ -50,7 +50,7 @@ const SideMenu = (props: Props) => {
         overflowY={"scroll"}
         alignItems={"flex-start"}
       >
-        <HStack w={"100%"} paddingRight={4}>
+        <HStack w={"100%"} paddingRight={6}>
           <Text fontSize={"4xl"}>Topics:</Text>
           <Spacer />
           <IconButton
