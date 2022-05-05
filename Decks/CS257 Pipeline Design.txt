@@ -68,3 +68,8 @@ what is the strategy for further reducing latency in a pipeline
 -
 add delays to reduce the chance of collision, reducing minimum average latency
 --
+How are delays usually implemented
+-
+1 cycle: use a simple latch
+2 or more cycles: multiple latches or dual ported memory
+--

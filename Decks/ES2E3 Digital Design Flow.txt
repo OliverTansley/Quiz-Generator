@@ -1,0 +1,98 @@
+--
+what is a design flow
+-
+the process of specifying and designing a system to its final implementation
+--
+what questions should a good specification be able to answer
+-
+what functionality is required
+what inputs and outputs are to be used/generated
+what performance is required
+what is the space/power budget
+what are the corner/edge cases to be weary of
+how might the design need to be modified/updated later
+--
+what does the specification do
+-
+defines what the design will be measured and verified against
+heavily influences choice of design architecture
+informs overall architecture design
+--
+what is design entry
+-
+the process of preparing HDL design files, various modules and sub-modules are defined and designed.
+interfaces with external inputs/outputs are defined.
+combinational and synchronous circuits are combined to create behavior
+--
+describe different types of High level synthesis tools
+-
+convert C software by parallelising parts of loops in programs
+convert model based designs like simulink
+others use special languages designed for parallelism like openCL
+--
+what are the two aspects of architecture design
+-
+Datapath: logic that acts on data to compute required functions
+Control: logic that manages the movement of data and control of datapath elements
+--
+describe the steps of functional verification
+-
+check that the HDL design meets funcitonal specification starting at lowest level modules and moving up the heirarchy
+Errors in design must be corrected before proceding
+--
+what does synthesis do
+-
+converts the design into a circuit, this involves more work if the description is higher level
+--
+what are the stages during synthesis
+-
+behaviorial descriptions are turned into valid circuits
+combinational logic is reduced
+arithmetic operators are expanded
+basic structures like memories and multiplexers are inferred
+the result is a low level representation using basic blocks, AKA a netlist
+--
+what does mapping do
+-
+converts blocks in a netlist into a circuit made of resources on the fpga, new netlist is now hardware specific
+--
+what is included in fpga mapping
+-
+combinational logic -> look up tables
+synchronous logic -> resources within blocks or LUTs
+arithmetic operators -> arithmetic resources or LUTs
+memories -> block Memories or LUTs
+Logic that fits certain functions -> hard blocks on the FPGA
+--
+what is synthesis verification
+-
+process of checking the circuit is valid
+--
+what happens during synthesis verification
+-
+check the circuit fits the target device
+ensure no logic was trimmed unecissarily
+ensure all logic was correctly synthesized
+obtain an initial estimate of timing performance
+--
+describe the steps of placing and routing on the fpga
+-
+takes a mapped netlist
+all blocks of the netlist are assigned a location on the fpga 
+the fpga connects these resources as per the net list
+multiple iterations occur to ensure the circuit fits timing requirements
+--
+why are asic design flows more complicated 
+-
+because the silicon is 'bare'
+--
+what are the steps of timing verification
+-
+check the timing constraints have been met
+analyse critical paths if timing must be improved
+simulate the final placed and routed design using a testbench
+--
+what is a bitstream
+-
+a binary file that specifies the circuit on the fpga, can be loaded on or stored in ROM to load automatically on startup
+--

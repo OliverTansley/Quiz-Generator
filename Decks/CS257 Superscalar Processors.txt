@@ -1,0 +1,13 @@
+--
+Define Superscalar processing
+-
+Fetching and decoding more than one instruction at a time
+--
+what is the window in a Superscalar processor
+-
+a simple staging register between the fetching and decoding pipelines and the execution pipelines
+--
+what is the degree of a Superscalar Processor
+-
+The number of replications before the window
+--

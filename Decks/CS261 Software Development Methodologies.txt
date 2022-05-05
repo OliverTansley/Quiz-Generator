@@ -1,0 +1,126 @@
+--
+what is a software Methodology
+-
+The systematic analysis of methods applied to software Development
+--
+what are the two different prcoess model catagories
+-
+Plan-driven and agile
+--
+what are the features of plan driven Development
+-
+all of the process activities are planned in advanced
+progress measured against the initial plan
+(nearly) fixed specification before Development commences
+--
+what are the features of agile Development
+-
+incremental planning
+more adaptable to change during Development
+--
+what are the stages of the waterfall model
+-
+requirements analysis
+system design 
+implementation and unit testing 
+integration and system testing 
+operation and maintainance
+--
+what happens in requirements analysis
+-
+systems services, constraints, and goals are established
+--
+what happens in system design
+-
+identification of the software components and their relationships
+--
+what happens implementation and unit testing
+-
+software is programmed in components or unitsm and each unit is tested against its specification
+--
+what happens in integration and system testing
+-
+software components are integrated and tested together as a complete system to ensure that the requirements have been met
+--
+what happens in operation and maintainance
+-
+the system is intstalled to fulfil its purpose, errors that appear later are fixed. System services enhanced as new requirements are discovered
+--
+when does the waterfall method work
+-
+if the requirements are understood and will not change during Development
+there are few team constraints (size,location)
+each component can be individually tested against its own spec before integration
+its easy to add members to the team (good documentation)
+--
+when doesnt the waterfall method work
+-
+customer has to wait a long time before seeing results
+it is difficult to accomodate change once the process starts
+difficult to respond to changing customer requirements
+--
+what problems occur if a waterfall project runs for a long time
+-
+business priorities change
+customer expectations change
+underlying technologies change
+--
+what is incremental Development
+-
+when software is Developed in stages, with interleaved customer feedback Each stage is planned in full and validated against the plan
+before the iteration is considered complete
+--
+what are the advantages of incremental Development
+-
+Cost of accommodating changing customer requirements is reduced
+Software available to user quicker, and therefore feedback can be easily solicited
+Greater perceived value for money - customers can see development progress
+Include the user in acceptance testing at each phase.
+--
+what are the disadvantages of incremental development
+-
+Difficult to estimate the cost of development
+Difficult to maintain consistency with new features being added - poor design choices at the beginning may hinder later development
+As progress continues, it becomes harder to include new features or make changes to fundamental components
+Not cost-effective to produce documentation for every version of the software
+Increased cost of repeated deployment
+--
+what is reuse oriented software engineering
+-
+when development of a product relies on a large base of reusable components
+--
+what are the stages of reuse-oriented development
+-
+Component analysis - searching for available components to meet the specification
+requirements modification - analyse the found components to determine if they meet the requirements, modifying requirements if acceptable to do so
+system design with re-use - desing the system using the components
+development and integration - integrate the selected components into a complete system
+--
+what is the first prcoess of a software Methodology 
+-
+software specification
+--
+what are the stages of requirements engineering
+-
+Feasability study 
+requirements elicitation and analysis
+requirements specification
+requirements validation
+--
+what does the Feasability study do 
+-
+determine that the task is Feasable and cost effective
+--
+what does the requirements elecitation and analysis stage do
+-
+derive the system requirements by looking at existing documentation, talking to customers, discussion of features possibly involving a prototype development
+--
+what does the requirements specification stage do
+-
+translates information gathered in elicitation phase into formal documents that define the set of requirements
+--
+what does the requirements validation stage do
+-
+ensures the requirements are achieveable and valid
+(you then ensure the customer signs off on these requirements)
+--

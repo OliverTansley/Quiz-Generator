@@ -7,5 +7,15 @@ CS257 Processor pipelining and performance
 -
 CS257 Pipeline Design
 -
+CS257 Superscalar Processors
+-
 AI Uninformed Search
+-
+AI Informed Search
+-
+ES2E3 Digital Design Flow
+-
+CS261 Software Development Methodologies
+-
+CS261 Agile Methodologies
 -

@@ -1,0 +1,58 @@
+--
+what is a heuristic
+-
+a function that uses extra knowledge that can guide the search
+--
+what is an admissable heuristic
+-
+a nonnegative heuristic function that is an underestimate of the actual cost of a path to a goal
+--
+what is best first search
+-
+selecting the path or node that is closest to the goal according to the heuristic function
+--
+state the features of Greedy best first search
+-
+space complexity b^n
+time complexity b^n
+not complete
+not optimal
+--
+describe A* search
+-
+both path cost and heuristic are used to determine the next chosen path
+f(p) = h(p) + c(p), is used to order nodes
+--
+when is A* admissable
+-
+the branching factor is finite
+arc costs are bounded above zero
+h(n) is nonnegative and an underestimate of the cost of the shortest path from n to a goal node
+--
+how does a more accurate heuristic help A* search
+-
+increasing the value of H whilst still keeping it an underestimate reduces the amount of paths that will be searched
+-- 
+what is the complexity of A* search
+-
+space: exponential
+time: exponential in relative error
+--
+what does cycle checking do
+-
+allow the search in question to prune paths which end in a node already on the path (without removing the optimal solution)
+--
+how are cycle checking and multiple path pruning implemented
+-
+maintaining a list of explored nodes, the closed list
+--
+what is the problem with multiple path pruning
+-
+what if a subsequent path to n is shorter than the first path to n
+--
+what are the solutions to the multiple path pruning problem
+-
+ensure this doesnt happen - pick shortest paths first
+remove all paths that use the longer path
+change the initial segment of the paths on the frontier to use the shortest path
+--

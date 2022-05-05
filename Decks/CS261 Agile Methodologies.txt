@@ -1,0 +1,70 @@
+--
+what is agile software development
+-
+a principle that defines a set of Methodologies
+--
+what is the main concept of agile development
+-
+rapid software development
+specification design and implementation are interleaved
+system is Developed as a series of versions with stakeholders providing feedback at each stage
+--
+what is the motivation behind agile development
+-
+software within businesses expect to be able to evolve rapidly, process driven approaches are too cumbersome we need to focus on the code as opposed to the design
+--
+what are the principles of agile Methodologies
+-
+customer involvement
+Incremental delivery
+People not process
+Embrace change
+Maintain simplicity
+--
+what is the main disadvantage of agile development
+-
+as less time is spent writing good documentation, it is harder for a maintainance team to upkeep the product
+works best when the maintainance team is the same team as the development team
+--
+what are the two agile Methodologies
+-
+extreme programming, scrum
+--
+name the stages and time periods of extreme programming
+-
+code
+pair programming: seconds
+unit testing:minutes
+pair negotiation:hours
+stand up meeting:one day
+acceptance test: days
+iteration plan:weeks
+release plan:months
+--
+name some other features of extreme programming
+-
+sustainable pace
+on site customer
+collective ownership (paired programming)
+constant refactoring
+--
+what are the three stages of scrum development
+-
+outline planning phase - establish general goals
+sprint cycles - each cycle develops an increment of the system
+project closure - wrap up the project, documents and deliverables
+--
+what are the features of a scrum sprint
+-
+typically 2-4 weeks
+daily team meetings to discuss current work
+each sprint completes item on the backlog
+features selected with the customer rather than isolated from the customer for the remainder of the cycle
+scrum master interfaces between team and customer
+at the end of each sprint work is reviewed and presented
+--
+what are the differences between a prototype and a mvp
+-
+a prototype is discarded after testing and will include features that may not be considered for the MVP.
+the MVP is the 1st version of a complete solution and may be sold to early adopters
+--
