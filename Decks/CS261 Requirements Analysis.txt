@@ -1,0 +1,54 @@
+-- 
+what are requirements
+-
+descriptions of what a system should do, the service it provides, and constraints on its operation 
+--
+what are the two different kinds of requirements
+-
+C facing and D facing requirements
+--
+what are C facing requirements
+-
+requirements designed to support the customer
+--
+what are D facing requirements
+-
+requirements designed to support the developer
+-- 
+what should C requirements do
+-
+Define how the system should work from a user’s view,
+Describe things  in natural language with diagrams,
+List constraints of operation from the user’s point of view
+--
+what should D requirements do
+-
+contain Detailed descriptions of the systems functions, services
+and operation constraints.
+Define exactly what must be designed and implemented,
+act as a basis for the contract with the developer
+--
+what qualities should a set of requirements have
+-
+prioritisation,consistency,modifiability,Tracability
+--
+what qualities should an individual requirement have
+-
+correctness,feasability,necessity,unambiguity,verifiability
+--
+name the users of the requirements analysis document
+-
+customers,managers,testers,engineers,maintainers
+--
+what are the sections of a requirements analysis document
+-
+preface,introduction,glossary,User requirements design,system architecture,system requirements specification,system models,system evolution,appendicies
+--
+what do functional requirements do
+-
+describe what the system should do, and what services it will provides
+--
+what do non-functional requirements do
+-
+describe constraints or qualities of the system as a whole, could even be legistlative constraints
+--

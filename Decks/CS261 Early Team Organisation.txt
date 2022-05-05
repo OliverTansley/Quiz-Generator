@@ -1,0 +1,59 @@
+--
+what are the two leading roles of a Software Development project
+-
+Project Manager and Business analyst
+--
+what stages are involved in project initiation
+-
+Understand the Business Goals (PM/BA): Identify business needs, problems or opportunities
+Plan the Project (PM): Breakdown project into manageable pieces of work
+Governance (PM):The process and procedures that will support the management and decision making during the project
+Quality Management (PM): Standards, processes and procedures to ensure fit for purpose deliverables.
+Risks and Issues (PM): Managing risks and issues to stop them preventing progress
+--
+describe the project initiation document
+-
+document acts as a reference throughout the project,includes the project purpose, scope,
+dependencies and constraints.
+--
+what are the stages involved in analysis 
+-
+Plan Analysis Approach (BA): Identify activities, stakeholders, analysis techniques and process for managing requirements.
+Elicit Requirements (BA): understand stakeholder’s existing environment, needs and concerns. 
+Document and Validate Requirements (BA): Techniques to organise and formally agree requirements
+Traceability and Re-use (BA): Techniques to ensure requirements can be traced through to the solution and re-used in future projects
+--
+what are the stages involved in design and building
+-
+Review Solution Options (BA): The selection of the solution that delivers the most value
+Document Solution Functionality (BA): Documentation that clearly defines the functionality of the agreed solution
+Communication (PM): Providing clear transparent communication own the progress of the project - good or bad
+--
+what stages are involved in testing
+-
+Review Test Plan (BA/PM): Ensure plan is in line with project governance and that scenarios are in line with requirements and solution design.
+Monitor Test Execution (PM): Scenarios performed against solution to ensure it is fit for purpose
+Prioritise Defects (PM): Understand the key defects that must be solved before solution is implemented.
+Testing Sign-off (BA/PM): Formal sign-off to confirm deliverables are ‘fit for purpose’ and meet stakeholders requirements.
+--
+what stages are involved in implementation
+-
+Implementation ‘Go-Live’ Plan (PM): Step-by-step plan that will implement the projects deliverables in Production environment 
+Handover to Production and Early Life Support (PM): Provide tools, training and documents needed to support project.
+Operational and Maintenance Support (PM): Provide details of tasks that will need to be carried out in production.
+Formal Project Acceptance and Sign off (PM): Formally completing the project and signalling the project can be closed down
+--
+what stages are involved in project closeDown
+-
+Review Benefits (PM)
+Archive Project Artefacts (PM)
+End Project Status Report and Lessons Learnt (PM)
+Reward and Recognition (PM)
+--
+what are the advantages of version control
+-
+Logs of updates
+git blame
+Roll back
+Version control
+--

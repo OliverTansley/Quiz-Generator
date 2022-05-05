@@ -1,0 +1,38 @@
+--
+What is the purpose of system modelling
+-
+help clarify functionality, provide a basis for development,inform design approaches and component-level decisions
+--
+what perspectives of a system can be modelled 
+-
+External,Interaction,Structural,Behavioural
+--
+what features of a class are shown in a UML class diagram
+-
+the classname (header), class attributes (body), class methods (footer), and relationships (connected arcs)
+--
+what kinds of relationships exist in a UML class diagram
+-
+association (-)
+aggregation (<>-)
+composition (<>-)
+--
+what happens when a container class is destroyed in a composite relationship
+-
+the contained classes are also all destroyed
+--
+what are the different components of a UML activity diagram
+-
+action (box)
+decisions (diamond)
+concurent activities (bars)
+start and end (circles)
+--
+what does a UML use case diagram represent
+-
+users Interaction with the system, each possible step is shown with connections to show different orders they could be completed in
+--
+what does a UML sequence diagram show
+-
+temporal Interaction between processes, arrows indicate communication between processes, bars indicate processes lifespan
+--
