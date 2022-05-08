@@ -56,3 +56,81 @@ ensure this doesnt happen - pick shortest paths first
 remove all paths that use the longer path
 change the initial segment of the paths on the frontier to use the shortest path
 --
+what is bidirectional search
+-
+when the search is performed backwards from the goal and forwards from the start simultaneously
+--
+what is the advantage of bidirectional search
+-
+time complexity is reduced to O(k^n/2) causing an exponential decrease in worst case time.
+Each search is often implemented differently, (one search for forward and another for backward).
+--
+what is island driven search
+-
+we break the problem down into multiple components, similar to bidirectional search there is an even 
+greater exponential decrease in time (O(k^n/j)), where j is the number of islands (intermediate goal nodes).
+--
+what is the problem with island driven search
+-
+it is difficult to define what nodes should be islands in order to garuntee optimality
+--
+what is a bounded depth first search
+-
+depth first search which only explores the graph up to a specified cost
+--
+what is iterative deepening
+-
+when multiple bounded depth first searches are performed, allowing a variable amount of the graph to be 
+explored, whilst using linear overhead (b/(b-1))
+--
+what is branch and bound search
+-
+when the first solution is found its cost is stored and any paths which have a c(p) + h(p) greater than this cost are pruned.
+h(p) should be an underestimate
+--
+what can branch and bound search be combined with
+-
+iterative deepening, the bound can be set to a low value and incremented until a solution is found
+--
+how are heuristics characterized
+-
+using the effective branching factor
+--
+what is effective branching factor
+-
+if A* tree-search expands N nodes and solution depth is d, then the effective
+branching factor, b∗, is the branching factor a uniform tree of depth d would have to
+contain N nodes.
+--
+what does it mean if one heuristic dominates another
+-
+h1 dominates h2 if it has a lower effective branching factor than h2 for all problem sets/depths tested
+--
+what are the methods of deriving heuristics
+-
+Relaxed problems,subproblems,pattern databases,disjoint pattern databases,Statistical approach,
+--
+explain relaxed problems
+-
+a heuristic is derived by reducing the constraints on operators in the problem
+--
+explain subproblems
+-
+a heuristic is derived by reducing the constraints on goals in the problem
+--
+explain pattern databases
+-
+store the exact cost of solutions of subproblems in a db, use this to return a heuristic
+--
+explain disjoint pattern databases
+-
+adding heuristics from multiple sub problems, removing repeated moves such that the heuristic remains admissable
+--
+explain Statistical approaches
+-
+during testing if it is found that when h2(n) = 14 the actual cost is 18 90% of the time, return 18 instead
+--
+explain feature approaches
+-
+use features of the world as heuristics, e.g. in chess number of peieces indicate success
+--
