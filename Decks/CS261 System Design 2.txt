@@ -1,0 +1,52 @@
+--
+what are the two kinds of UML diagram
+-
+Structure diagram, and Behaviour diagram
+--
+what is the difference between a state diagram, and an activity diagram
+-
+state diagrams perform actions in response to events, activity diagrams complete a sequence of actions automatically.
+state diagrams show the current state of the system within each node
+--
+what does a context model do
+-
+shows the context with which a system will work in, i.e. other systems external to the system
+--
+why is it important to write correct UML 
+-
+to ensure ambiguities present are resolved for later implementation
+--
+what are the features of writing correct UML class diagrams
+-
+class names (italic for abstract classes <<interface>> prefix for interfaces).
+attributes, optional to include datatypes.
+methods (not getters,setters, or inherited methods).
+attributes (with correct symbol, static ones should be underlined).
+comments and association arcs
+--
+what are the symbols for attributes in a UML class diagram 
+-
++,public. -,private. #,protected. ~,package. /,derived.
+--
+what are the different features of arcs in UML class diagrams
+-
+multiplicity, (1-1 1-many).
+association, (aggregation,composition,dependancy).
+class hierarchy (parent class, interface,abstract class).
+--
+what does aggregation mean
+-
+is part of
+--
+what does composition mean
+-
+is made up of
+--
+what does dependancy mean
+-
+uses temporarily
+--
+what are the main features of writing correct sequence diagrams
+-
+time moves down the diagram, processes/objects
+--
