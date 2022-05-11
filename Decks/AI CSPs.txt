@@ -1,0 +1,72 @@
+--
+what is a constraint satisfaction problem
+-
+a set of variables have a domain of possible values, the correct assignment is one
+which satisfies a set of rules/constraints
+--
+what are the different kinds of CSPs
+-
+finite domains,infinite domains,continous values and discrete values
+--
+what are the different kinds of constraints
+-
+Unary constraints,involve a single variable.
+Binary constraints,involve 2 variables.
+Higher-order constraints, involve 3 or more variables.
+preferences/soft constraints, better assignments which arent necessary for a solution.
+--
+describe the generate and test algorithm
+-
+generate each assignment of the variables, and test it against all of the constraints until a solution is found.
+d^n assignments
+--
+what are backtracking algorithms
+-
+systematically explore the assignemnt space, test constraints as soon as corresponding variables are defined, if
+a partial assignemnt fails any constraint the algorithm backtracks and attempts the next assignemnt
+--
+what heuristics can be used to improve backtracking search
+-
+minimum remaning values & degree heuristic, least constraining value
+--
+what other methods can be used to improve backtracking assignemnt
+-
+Consistency algorithms,cutset conditioning,variable elimination
+--
+what is the MRV heuristic
+-
+choosing the variable with the least remaning acceptable values
+--
+what is the degree heuristic
+-
+choosing the variable with the most constraints on other variables (used as a tie breaker for MRV)
+--
+what is the least constraining value heuristic
+-
+choose the value that rules out the least values from other variables
+--
+describe consistency algorithms
+-
+domains of variables are pruned as much as possible given any unary assignments
+--
+what is a domain consistent variable
+-
+a variable in which constraints do not rule out any value of its domain
+--
+what options are there for solving a csp after arc consistency
+-
+splitting the domain of a variable, and running arc consistency again, or perform a backtracking search
+--
+what is conditioning
+-
+assignemnt of a variable and pruning of its neighbors domains to make the Constraint graph more tree shaped
+--
+why do we want tree shaped constraint graphs
+-
+tree shaped csps can be solved in O(n*d^2) time as opposed to O(d^n) time
+--
+what is variable elimination
+-
+when constraint logic for a set of variables is combined, such that a variable can now be ignored from the new constraints
+whilst maintaining their meaning
+--

@@ -13,6 +13,12 @@ AI Uninformed Search
 -
 AI Informed Search
 -
+AI CSPs
+-
+AI Local Search
+-
+AI Adversarial Search
+-
 ES2E3 Digital Design Flow
 -
 CS261 Software Development Methodologies
@@ -26,4 +32,6 @@ CS261 Early Team Organisation
 CS261 System Design 1
 -
 CS261 System Design 2
+-
+CS261 System Design 3
 -

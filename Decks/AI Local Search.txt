@@ -1,0 +1,92 @@
+--
+describe local search
+-
+search moves between neighbors of a single current state, and does not make use of paths.
+--
+what kinds of problems can make use of local search
+-
+problems where the path to a goal is irrelevant of the solution (optimisation problems)
+--
+describe hill climbing (greedy local search)
+-
+change variables in order to always improve the 'quality' of the state
+--
+what are some of the problems found in greedy local search
+-
+ridges, platoes, and local maxima
+--
+how do we account for platoes in local searches
+-
+allow for a 'random walk' to attempt to get off the platoe, limit number of moves else infinite random walk will occur
+--
+what are the two new features to random greedy local search
+-
+random steps, random walk
+--
+what is a random walk
+-
+randomly reassigning values to all variables
+--
+what scenrio does random restart work best in
+-
+when there are few global maxima, that are very high
+--
+what scenrio does random walk work best in
+-
+when there are very many small local maxima
+--
+what is stochastic local search
+-
+a combination of greedy descent,random walk, and random restart
+--
+what is a runtime distribution
+-
+graphs that illustrate how many solutions can be gathered within a specific runtime 
+--
+what is simmulated annealing
+-
+randomly reassign variables adopting all which improve the state, if an assignment doesnt improve the state adopt it probabalisticly depending 
+on value T
+--
+how is the probability of a worse assignment in simmulated annealing being accepted calculated
+-
+e^((h(n) -h(n'))/T)
+--
+how do we prevent cycling in local search
+-
+keep a 'tabu list' of the last k assignments, do not allow any of these states as the next assignment. (can be expensive if k is large)
+--
+what is parallel search
+-
+maintain a population of k assignments an update each one on every iteration, whenever an acceptable solution is found it is reported
+--
+describe a beam search
+-
+like parallel search, except we generate all neighbors for our k states, and chose the k best of all neighbors
+--
+what is stochastic beam search
+-
+uses a heurisitic to probabalisticly choose the k best of all neighbors, the heurisitic represents how good the new state is
+--
+describe genetic algorithms
+-
+uses a string representation of states to combine features of parent states in order to generate new ones
+--
+what is culling in genetic algorithms
+-
+when 'offspring' states are generated if they do not score high enough from a fitness function, they can be deleted or 'culled'
+--
+what is mutation in genetic algorithms
+-
+once 'offsrping' have been generated each location within the string is subject to a random, very unlikely, mutation
+--
+what are the stages of genetic algorithms
+-
+selection based on fitness function,
+crossover to produce 'offspring',
+mutation.
+--
+what is the advantage of GA's
+-
+they take large initial steps if their parents are quite different, then converge on a more optimal solution over time
+--

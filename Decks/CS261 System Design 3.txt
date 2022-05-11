@@ -1,0 +1,74 @@
+--
+what are the two main uses of structural designs
+-
+A way of facilitating discussion about the system design with stakeholders.
+A way of documenting an architecture that has been designed.
+--
+what kind of Requirements inform the structure of the system
+-
+Non-functional Requirements
+--
+what factors should be considered during system architecture design
+-
+performance,security,saftey,availability,maintainability
+--
+what is an architectural pattern
+-
+a way to represent and share common knowledge
+--
+what are the different architectural patterns
+-
+layered,Repository,Pipe and filter,Model view controller
+--
+what are the advantages to a layered architecture
+-
+Layers can be assigned to different members of the development team
+Can replace layers with different implementations at a later date
+Can easily develop multi-platform implementations through swapping layers
+Can add redundant facilities, such as authentication to each layer to increase dependability
+--
+what are the disadvantages of a layered architecture
+-
+Separation of functionality like this can be hard, and requires you to trust your developers
+--
+what are the advantages of a Repository architecture
+-
+Components can be independent,All data can be managed consistently
+as it is stored in the same place,Changes made by one component
+can be easily propagated to all components,Efficient means of sharing large
+amounts of data.
+--
+what are the disadvantages of a Repository based architecture
+-
+Single point of failure,Inefficient due to having all requests
+go through repository,Distributing repository to scale up
+may be difficult as we need to keep consistency,Have to enforce standardised
+approaches and data models, makes evolution difficult.
+--
+what is the advantages of a pipe and filter system
+-
+Easy to understand and evolve - adding new transformations is easy,
+Matches the structure of many applications,Supports reuse - components are just
+transformations so can be easily ported,Flexible, as it can be a sequential or a
+concurrent system
+--
+what are the disadvantages of a pipe and filter system
+-
+Standardised data format required,Each component must stick to a
+rigorous standard which makes modification difficult,If your input updates / changes the
+system may need to be heavily edited,Can’t be used to graphical interfaces
+--
+what are the advantages of model-view-controller architecture
+-
+Separates components of implementation, in particular user-facing components,
+Data can be changed independently of how it is displayed,
+Allows user to have control over how they see the data - without changing the underlying data model
+Changing data in one representation can be propagated to other representations
+--
+what are the disadvantages of model-view-controller architecture
+-
+Introduces additional complexity to design,
+Even simple interactions require considering the three different aspects of the system,
+Can be difficult to distribute development,
+Portability is low due to the heavy interaction between all three components of the system.
+--

@@ -1,0 +1,67 @@
+--
+what kinds of situations are Adversarial searches used
+-
+when two agents are competing creating a random element
+--
+where can uncertainty arise from against opponents
+-
+Opponent trying to make the best move for themselves,
+Randomness, e.g. throwing a dice,
+Insufficient time to determine exact consequences of actions,
+--
+what components make the formal view of a game
+-
+the initial state,
+the possible actions that can be performed,
+a terminal test,
+a utility funciton
+--
+what does the utility function do
+-
+give a numeric value to any state of the game
+--
+what is a minimax value
+-
+the utility (value of terminal state) of being in that state assuming both players play optimally
+--
+how does the minimax algorithm work
+-
+it examines all possible future states and heads down the branch with the highest terminal state, branches are made assuming optimal play
+--
+what are the dimensions of the minimax algorithm
+-
+complete,optimal(against optimal opponent),space O(bd), time (b^d)
+--
+what is alpha beta pruning
+-
+a method used to prune branches in the games state tree, such that branches pruned will not alter the result of minimax
+--
+what is the time complexity of alpha beta pruning
+-
+usually around O(d^3b/4) nodes are examined, however if nodes are examined in optimal order it can be as low as O(d^b/2).
+--
+how else can we reduce the size of the state tree in Adversarial searches
+-
+a heuristic evaluation function and a cutoff test to determine when to stop searching in a tree
+--
+what is the effect of reducing the tree size
+-
+by considering non terminal nodes as terminal, our decisions can be made faster but will have some uncertainty as the full game is not considered
+--
+how are weights used in heuristics
+-
+when features of the states are being used to determine utility, sometimes there are multiple features that are being considered
+weights are applied to a linear sum of features so that more important features have greater impact on utility
+--
+what are the two different kinds of cutting off search
+-
+setting a fixed depth to search, or using iterative deepening to search as deep as possible in unspecified time
+--
+how can we improve the reliability of cutoff search
+-
+only set quiescent nodes as terminal nodes, to reduce the amount by which the utility of our termninal nodes could change (called quiescient search)
+--
+what is the horizon problem
+-
+faced with unavoidable damaging move, a fixed depth search believes delaying this move is optimal
+--
