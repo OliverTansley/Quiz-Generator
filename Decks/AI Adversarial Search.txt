@@ -65,3 +65,35 @@ what is the horizon problem
 -
 faced with unavoidable damaging move, a fixed depth search believes delaying this move is optimal
 --
+how do we deal with random chance in Adversarial search
+-
+chance nodes are added to our game state graph, these include their result and probability. 
+--
+How does expectiminimax deal with chance nodes
+-
+their utility is multiplied by their probability of occurence
+--
+what are the disadvantages of alpha-beta tree search
+-
+high branching factors reduce the depth which the search can reach, utility funciton is difficult to define.
+--
+what is monte carlo tree search
+-
+estimate utility of states from simulated games originating from that state.
+--
+what is a playout policy 
+-
+the method used to choose how simulated games are played, decreases amount of searching required
+--
+what features of simulation do we need to focus on 
+-
+exploration of states having few playouts, exploitation of states having done well in the past
+--
+what are the steps of monte carlo tree search
+-
+selection: go from root to leaf using selection policy,expansion:grow tree by generating new child of selected node,simulation:perform playout,back-propagation: use result of playout to inform utility
+--
+what is UCT
+-
+an effective selection policy which balances exploitation and exploration of the simulated moves. (go lookup formula)
+--
