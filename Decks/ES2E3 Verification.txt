@@ -1,0 +1,67 @@
+--
+what are the different types of Verification
+-
+algorithmic,functional,synthesis,timing
+--
+what is algorithmic Verification
+-
+deciding if the algorithmn is suitable for the task before considering implementation
+--
+what is functional Verification
+-
+ensure the designed architecture implements the algorithmn correctly
+--
+what is synthesis Verification
+-
+ensure the design is synthesisable and can be implemented on the target hardware
+--
+what is timing Verification
+-
+ensuring the circuit meets any timing constraints
+--
+where do errors come from in design
+-
+specification (errors/misunderstandings). errors in the code.
+--
+what is a testbench
+-
+an environment around an instance of a module, which drives data into, and views data out of the circuit
+--
+what are the features of a testbench
+-
+drivers, registers which send data to the circuit, the instance of the circuit we are testing, viewers, 
+wires which contain the outputs of the circuit we are testing
+--
+what is the initial block
+-
+a block of code which allows us to set the initial conditions of our test (# can be used for a time delay)
+--
+what is the '$display' command
+-
+a non synthesisable command which allows us to display simulated data from tests to the console
+--
+what does the '$dumpfile' command do
+-
+allows us to create a file of the results of a particular set of signals into a .vcd (value change dump) file
+--
+what are the different levels of Software model
+-
+Simple model with no reflection of the hardware design,
+Model that mimics the overall functional architecture of the hardware design,
+A cycle-accurate model – matches all the steps down to a clock cycle,
+Bit-accurate model – all arithmetic is done at the same precision as the hardware,
+--
+what are some differences that can occur between functional circuits and software models
+-
+Number representation can cause differences,
+We may use different calculation methods,
+We may use shortcuts or some refactoring of the algorithm,
+--
+what are the two methods we can use for Verification
+-
+comparison of software models, implementation of an inverse function
+--
+describe a simulation environment
+-
+displays the electronic signals of different defined wires/components in our design
+--

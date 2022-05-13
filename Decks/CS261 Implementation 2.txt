@@ -1,0 +1,28 @@
+--
+what are structural patterns
+-
+Used to ease design / implementation by identifying simple ways to realise the relationships between entities
+--
+what is a proxy pattern
+-
+a reference to a resource we only want to load on demand
+--
+what are the different use cases for proxies
+-
+delay loading (virtual proxy),protecting crutial parts of a System (protection proxy)
+--
+what are the advantages to proxies
+-
+Can hide away parts of the service object, so it can be changed or controlled without client knowledge,
+Allows you to manage object life cycle,
+Proxy provides availability even if the service object isn’t ready or available,
+New proxies can be introduced without changing the service or clients
+--
+what are the disadvantages of proxies
+-
+As always - more classes get introduced, adding complexity to the code base
+It adds another step in getting the response, so may result in a slower service
+--
+what is a decorator
+-
+--

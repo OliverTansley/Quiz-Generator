@@ -21,6 +21,8 @@ AI Adversarial Search
 -
 ES2E3 Digital Design Flow
 -
+ES2E3 Verification
+-
 CS261 Software Development Methodologies
 -
 CS261 Agile Methodologies
@@ -34,4 +36,10 @@ CS261 System Design 1
 CS261 System Design 2
 -
 CS261 System Design 3
+-
+CS261 Project Management
+-
+CS261 Implementation 1
+-
+CS261 Implementation 2
 -

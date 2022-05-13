@@ -1,0 +1,98 @@
+--
+why might a project fail
+-
+poor Requirements, deadline was unrealistic,insufficient budget,poor comunication between Team and customer,inadequete testing,team members did not fulfil their tasks
+--
+what are the four main goals of project Management
+-
+Deliver the software at the agreed time, keep costs within budget,deliver software that meets expectations,maintain a happy well functioning development team
+--
+what does the succes of a team depend on
+-
+the people in the team,the group organisation,technical and managerial communication
+--
+what are the four factors of people management
+-
+Consistency,respect,inclusion,honesty
+--
+what are the typical roles of a project team
+-
+project manager,business analyst,software architect,designer,software developer,software tester
+--
+what are the two different types of group organisation
+-
+informal, group decisions are made by a consensus.
+hierarchical groups, have a leader and levels of management.
+--
+what are the benefits to a cohesive group
+-
+establish your own quality standards,individuals learn from/support eachother,
+Knowledge is shared,Refactoring and continual improvement is encouraged.
+--
+what are the stages to risk management
+-
+risk identification,risk anaylsis,risk planning,risk monitoring.
+--
+what kind of risks can be identified in a SE project
+-
+staff turnover, management change,hardware unavailable,specification delays,Requirements change,size underestimate,tool underperformance,technology change business,product competition.
+--
+what are the three groups of risk
+-
+product,project,business risks
+--
+what are different types of risk
+-
+technology risks,people risks,organisational risks,Requirements risks,estimation risks,tool risks
+--
+what happens in risk anaylsis
+-
+each risk is considered and judged by severity
+--
+what happens in risk planning
+-
+plans are considered for the avoidance,minimistation and contingency of each risk
+--
+what is risk monitoring
+-
+throughout production the risks probability of occuring are checked to ensure problems are caught early
+--
+what is a risk register
+-
+a collection of all risks and their important details
+--
+what are the stages to project planning
+-
+propose the project having some idea of how it will be completed,
+plan who will work on the project and how it will be decomposed,
+periodically plan the project during development when problems/changes occur
+-- 
+what are the stages to project planning
+-
+identify activities and seperate tasks planning when they will be done
+reduce dependancy between tasks so people dont wait for eachother
+estimate the time and resources for each activity
+allocate people to these activities and create project charts
+--
+what is a Gantt chart
+-
+shows tasks listed vertically against time
+--
+what is an activity network
+-
+shows the tasks and their relationships with eachother including their duration
+--
+what is total float in an activity network node
+-
+the amount of time an activity can be delayed without delaying project finish date
+--
+what are the two methods of estimating the complexity of software
+-
+Experienced-based: uses past experience of projects to give an idea of how this one compares and base estimations on this.
+Algorithmic cost-based: uses fixed algorithms to calculate an estimate of complexity and cost.
+--
+how can we measure the success of a project
+-
+how does it meet the customer Requirements
+how does it meet the original specification
+--

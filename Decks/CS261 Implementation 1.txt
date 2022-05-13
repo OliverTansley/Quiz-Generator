@@ -1,0 +1,58 @@
+--
+what are design patterns
+-
+shorthand for describing aspects of program Organisation
+--
+what are some examples of a design pattern
+-
+encapsulation,subclasses,iteration,exceptions
+--
+what are creational patterns
+-
+design patterns that deal with the creation of new objects in our code.
+--
+what is a factory
+-
+an object which handles the production of complex objects, to avoid repeating code many times over
+--
+what are the advantages to factories
+-
+cutting down on repeated code,
+Adding new variations and scenarios is easier,
+Good testability,
+--
+what are the disadvantages to factories
+-
+We have to make a lot of additional classes,
+The factory is linked to the class it produces, if we extend the class being produced, we need to also update / extend the factories.
+--
+what are builders
+-
+objects that construct objects made out of components that have a variety of different options
+--
+what are the advantages of builders
+-
+More control over construction,Can re-use construction code for different instances,Single responsibility principle - only one place has to
+deal with the complex construction of an object
+--
+what are the disadvantages of builders
+-
+requires a large number of new classes,
+Code becomes longer, construction is still complex just more modular
+--
+what is a prototype
+-
+an object which has the ability to clone itself completeley
+--
+what are the advantages of prototypes
+-
+Don’t need to make another subclass just to create an object,
+Remove heavy initialisation in favour of cloning,
+Can produce complex objects easily,
+Can keep class hierarchy simple,
+--
+what are the disadvantages of prototypes
+-
+Circular references can be tricky (one object points to another, which points back to it)
+Might still have to perform heavy changes and updates on the cloned object
+--
