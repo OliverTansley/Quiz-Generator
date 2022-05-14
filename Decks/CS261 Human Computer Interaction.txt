@@ -1,0 +1,123 @@
+--
+what two things do we need to consider when designing UIs
+-
+Memory, and attention
+--
+what are the four different types of attention
+-
+selective: tuning things out to focus on others,
+sustained: 'attention span',
+divided: multitasking,
+executive: more organised version of sustained
+--
+how can we keep users attention in UI design
+-
+don’t clog the UI,Switch up your visuals,Make it intuitive,Use attention grabbing techniques sparring
+--
+how can we manipulate attention in UI
+-
+guide the user’s attention to the part of the display most relevant,
+grab the user’s attention away from their current task when required,
+metaphors enable recognition even in new systems (drag and drop),
+--
+what are the three components of Memory
+-
+sensory stores: information stored before in working memory,
+Working Memory: Holds transitory information and makes it available for further information processing,
+Long-term Memory: Holds information for long term storage,
+--
+what is short term memory
+-
+a scratchpad for temporary recall of the information under processes
+--
+what are the theories around forgetting short term memory
+-
+Decay Theory: Memory decays over time,
+Displacement Theory: New memory overwrites the old memory,
+Proactive Interference: Memory cannot be retrieved because it is stored in the wrong place
+--
+what are the two kinds of long term memory
+-
+Episodic Memory, and Semantic Memory
+--
+what kind of memory should we design UIs for
+-
+short term memory
+--
+why is short term memory best for UIs
+-
+more effort is expended commiting and retrieving from long term memory
+--
+what is normans human action cycle
+-
+the stages which humans go through when interacting with a computer system
+--
+what are the stages of the human action cycle
+-
+form a goal,intention to act,planning to act,execution,feedback,interpret feedback,evaluate outcome
+--
+what aspects of the cycle are used to evaluate UIs
+-
+the gulf of evaluation, the gulf of execution
+--
+what is the gulf of evaluation
+-
+the cognitive gap which must be crossed to interpret a UI
+--
+what is the gulf of execution
+-
+the gap between the users goals and the means to execute those goals
+--
+what principles can we extract from the use of the cycle
+-
+provide visibility,provide a good conceptual model,provide good mappings,provide feedback
+--
+what principles can be derived from Gestalt laws of perceptual organisation
+-
+the figure ground principle,the similarity principle,the proximity principle,the common region principle,the continuity principle,the closure principle, the focal point principle
+--
+what is the foreground principle
+-
+people segment their vision into the figure and foreground
+--
+what is the similarity principle
+-
+if things look similar we assume similar functionality
+--
+what is the proximity principle
+-
+if objects are close together we assume they are related
+--
+what is the common region principle
+-
+we group objects together that are in the same close region (borders)
+--
+what is the continuity principle
+-
+if we put objects in a line or curve we assume they are related
+--
+what is the closure principle
+-
+if we see a complex arrangement of shapes, we are likely to form them into a pattern
+--
+what is the focal point principle
+-
+you will be drawn to the most unique object
+--
+what is perception
+-
+knowledge that is detected rather than constructed
+--
+what are affordances
+-
+what an object allows us to do
+--
+what are signifiers
+-
+hints/cues as to what affordances an object has
+--
+what are nelsons usability principles
+-
+Visibility of system status,Match between system and real-world,User control and freedom,Consistency and standards,Help users recognise and recover from errors,
+Error prevention,Recognition rather than recall,Flexibility and efficiency of use,Aesthetic and minimalist design,Help and documentation.
+--

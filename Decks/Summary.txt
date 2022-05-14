@@ -43,3 +43,7 @@ CS261 Implementation 1
 -
 CS261 Implementation 2
 -
+CS261 Human Computer Interaction
+-
+CS261 Dependability
+-

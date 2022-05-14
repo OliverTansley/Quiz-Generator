@@ -1,0 +1,81 @@
+--
+what is Dependability
+-
+The trustworthiness of a computer system such that reliance can justifiably be placed in the service it delivers
+--
+why is Dependability important
+-
+System Failures affect people,Users reject unreliable systems,System failures are costly,Undependable systems cause information loss
+--
+how can we measure reliability
+-
+Probability of Failure on Demand,Rate of occurrence of failures,Mean time to failure,Availability
+--
+what are the different attributes of Dependability
+-
+Availability - The likeliness that a service provided by a computer system is
+ready for use,
+Reliability - A measure of how likely the system is to provide its service,
+Safety - The extent to which a system can operate without damaging its environment,
+Confidentiality and Integrity of data,
+Maintainability - Defined as a function of time representing the probability that
+a failed computer system will be repaired in t time or less,
+--
+what attributes are related to Dependability
+-
+Repairability , Maintainability , Error Tolerance 
+--
+what is a fault
+-
+the cause of an error
+--
+what is an error
+-
+the manifestation of a fault
+--
+what is a failure
+-
+the result of an error propagating beyond a system boundry
+--
+what are the three kinds of system failures
+-
+harware failure,Software failure,operational failure
+--
+how can we provide Dependability to our systems
+-
+fault avoidance (careful Development), fault detection and correction (find and remove faults before deployment), fault Tolerance (design a system that is capable of dealing with faults)
+--
+what are the different ways a system could recover from an error
+-
+graceful degradation: system operates in reduced capacity
+Redundancy: spare capacity is included that can be used if other parts failed
+Diversity: redundant components are unique so less likely to have same failures
+--
+what is a dependable Processor
+-
+steps which ensure that dependable Software is produced
+--
+what are the features of dependable processes
+-
+Documentable , Standardised , Auditable , Diverse , Robust 
+--
+what are the different kinds of dependable system architecture
+-
+protection systems,Self-monitoring architectures,N-version Programming
+--
+how do protection systems work
+-
+they are a seperate system that runs in parallel with the original system, performs an action in the case of a fault
+--
+how do self monitoring systems work
+-
+monitors the environment all the time computing the same outputs as the original system in a more diverse way, if a difference is detected an action is performed
+--
+how does N version programming work 
+-
+multiple copies of a system are made by different development teams, the outputs of each are compared and the majority vote is chosen
+--
+what feature do dependable systems rely on
+-
+diversity - to reduce the chance of multiple systems failing in the same way
+--

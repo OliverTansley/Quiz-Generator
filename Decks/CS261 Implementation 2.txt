@@ -25,4 +25,49 @@ It adds another step in getting the response, so may result in a slower service
 --
 what is a decorator
 -
+an object which extends another object, offering new visual functionality which can be edited
+--
+what are the advantages of using decorators
+-
+Extend behaviour without adding several new subclasses,
+Responsibilities of an object become dynamic at runtime,
+Unlike subclasses, you can combine wrappers,
+Promotes the single responsibility principle,
+--
+what are the disadvantages of decorators
+-
+Removing wrappers from the stack later is difficult,
+Hard to implement in a way that isn’t order dependent - your wrappers need to be added in a specific order,
+Initial code layout can look messy,
+--
+what is an adaptor
+-
+object which extends from another, but reformats outputs to make them usable in new parts of our system
+--
+what are the advantages of adaptors 
+-
+Promotes the single responsibility principle,
+New adaptors can be introduced without heavy refactoring of current code,
+--
+what are the disadvantages of adaptors
+-
+It’s a hit to the complexity of the code,
+Depending on the size of your code converting the original service object may be easier
+--
+what is a flyweight pattern
+-
+a seperate object that holds data which is stored in many instances of an object, saving Memory
+--
+what are the advantages of the flyweight pattern
+-
+It saves memory in programs with lots of objects using the same resource
+--
+what are the disadvantages to flyweight patterns
+-
+Some data may need to be recalculated every time a method is called due to context,
+Code becomes more complicated, and tracing the full state of some objects becomes an issue
+--
+what do we have to be careful of when using structural patterns
+-
+dont overdo it, code complexity will increase massively
 --
