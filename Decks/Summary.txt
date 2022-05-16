@@ -43,7 +43,15 @@ CS261 Implementation 1
 -
 CS261 Implementation 2
 -
+CS261 Implementation 3
+-
 CS261 Human Computer Interaction
 -
 CS261 Dependability
+-
+CS261 System Testing 1
+-
+CS261 System Testing 2
+-
+CS261 Release Management
 -

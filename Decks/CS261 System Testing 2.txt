@@ -1,0 +1,68 @@
+--
+what are the differnt granularities of testing
+-
+unit testing, component testing,system testing
+--
+what is a mock object
+-
+an instance of a class we require for unit testing
+--
+what kinds of errors occur at a component/interface level
+-
+Interface Misuse: one unit doesnt pass the right params,
+Interface Misunderstanding: one interface doesnt understand the behavior of another and uses it incorrectly,
+Timing Errors: timning constraints arent met due to other interfaces,
+--
+what are the key differences between system and component testing
+-
+We may introduce off the shelf / prebuilt components not made by our team by needed for the final system,
+Components from all teams will be included - we’re making as complete a system as possible
+--
+what is use case testing
+-
+testing a particular peice of functionality that will be required by users of the system
+--
+what is test driven Development
+-
+tests are developed for an increment of code, Development doesnt progress until all these tests are working
+--
+what are the advantages to test driven Development
+-
+clarify what the code segment is supposed to do,
+requires a strong understanding of the functionality to be added,
+this then makes it easier to implement the actual functionality, as there is a good understanding
+--
+what are the disadvantages to test driven Development
+-
+If you don’t know enough to write the tests, you can’t develop the required code,
+You may forget to check important scenarios (such as division by zero), impacting the effectiveness of your testing,
+--
+when shouldnt test driven Development be used
+-
+when a system is being refactored, when external components are being used,when the system is mulithreaded (inconsistent results)
+--
+what are the types of user testing
+-
+alpha testing beta testing and acceptance testing
+--
+what is the differences between alpha and beta testing
+-
+alpha testing happens during development, whereas beta builds are nearly complete,
+beta testing uses a larger group
+--
+what are the stages of acceptance testing
+-
+Define acceptance criteria,Plan acceptance testing,derive acceptance tests,acceptance tests,negotiate test results,accept or reject the system
+--
+when is acceptance criteria defined
+-
+before initial contract is signed
+--
+what is done during acceptance testing planning
+-
+establish resources needed and schedule testing,define the requirements coverage and the order of testing
+--
+what is conditional accceptance
+-
+the customer accepts the product assuming certain issues will be resolved
+--

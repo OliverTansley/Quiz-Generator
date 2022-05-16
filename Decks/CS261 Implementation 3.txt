@@ -1,0 +1,90 @@
+--
+what are behavioral patterns
+-
+Behavioural patterns are concerned with how objects communicate
+--
+what is an iterator pattern
+-
+an object which traverses a container such that all of its elements will be accessed
+--
+what are the advantages to using iterators
+-
+Single responsibility principle,New iterators and traversals can be introduced easily,Can iterate multiple ways in parallel,Can even pause iteration, and carry on later
+--
+what are the disadvantages of iterators
+-
+Not always necessary (list?),For highly specialised objects, iterators can be less
+effective
+--
+what is an observer pattern 
+-
+an object which notifies depending objects of any changes in its state that occur
+--
+what are the advantages of observers
+-
+New subscribers can be added without needing to redesign the publisher - cuts down on errors,
+Relationships between objects can change at run time.
+--
+what are the disadvantages of observers
+-
+Subscribers are notified in a random order
+--
+what is a memento pattern
+-
+a caretaker object stores a collection of 'snapshot' objects which represent previous states of our current object
+--
+what are the advantages of memento patterns
+-
+We’re making back ups without violating encapsulation,
+By extracting out all the maintenance of history and restoration, we keep the original objects interface as simple as possible,
+--
+what are the disadvantages of memento patterns
+-
+Heavy memory cost,We need caretakers to track originator life cycles, so we can erase unneeded mementos,
+Dynamic programming languages (PHP, Javascript, Python) can’t actually guarantee the memento’s state remains untouched,
+--
+what is a strategy pattern
+-
+an object is responsible for selecting a particular Implementation of solving a problem from multiple options
+--
+what are the advantages of strategy patterns
+-
+Can swap implementations at runtime,We’re separating implementation details of an algorithm
+from the code that uses it,Simplifying the class hierarchy - composition is replacing
+inheritance,Introduce new strategies without having to edit the
+original code that uses them
+--
+what are the disadvantages of strategy patterns
+-
+With only a few algorithm choices there’s no need to increase
+the compositional complexity,Requires clients to understand the key differences between
+strategies to select appropriate ones,Anonymous functions are making this approach obsolete
+--
+what are the SOLID design principles
+-
+Single responsibility,
+Open / closed,
+Liskov substitution,
+Interface segregation,
+Dependency inversion,
+--
+what is the single responsibility principle
+-
+a class should be responsible for one peice of functionality
+--
+what is the open/closed principle
+-
+Open for extension, closed for modification
+--
+what is the Liskov substitution Principle
+-
+An object that uses a parent class, can use its child classes without knowing
+--
+what is the interface segregation principle
+-
+Many specific interfaces are better than a general interface
+--
+what is the Dependency inversion Principle
+-
+That high level classes do not rely on functions from low level classes
+--

@@ -1,0 +1,93 @@
+--
+what does testing do 
+-
+shows a program does what it is meant to do
+--
+what is Verification
+-
+testing if the product meets its specification
+--
+what is validation
+-
+testing if the product meets the needs of the customer
+--
+what is an error
+-
+a human action that produces an incorrect result
+--
+what is a failure
+-
+deviation of Software from its expected result
+--
+what is a bug
+-
+a manifestation of errors in Software
+--
+what is testing
+-
+the process of excersizing Software to see if it meets its Requirements
+--
+what is a test case
+-
+a set of inputs preconditions and expected outcomes to test a specific Requirement
+--
+what is reliability
+-
+the probability that Software will not cause the failure of system
+--
+what is a test plan
+-
+a record of the application of test cases
+--
+what are the different kinds of testing
+-
+static and dynamic
+--
+what is static testing
+-
+testing without execution: code review,walkthroughs and inspection
+--
+why do we do static testing
+-
+allows attributes other than correctness to be studied,
+Errors hide other errors,Code does not need to be complete,
+Allows us to consider quality too
+--
+why do we do dynamic testing
+-
+inspection is bad at discovering, Unexpected interactions between
+different components,Timing based issues,System performance issues
+--
+what is dynamic testing
+-
+executing code with specific test cases
+--
+what are the two kinds of dynamic testing
+-
+Structural and functional
+--
+what is Structural testing
+-
+test cases derived from the control flow of the system
+--
+what is functional testing
+-
+test cases derived from the formal component specification
+--
+what are the steps to dynamic functional testing
+-
+The identification of functions that the software is expected to perform,
+The creation of input data based on the function’s specifications,
+The determination of output based on the function’s specifications,
+The execution of the test case,
+The comparison of actual and expected outputs,
+check whether the application works as per the customer’s needs
+--
+what are the different granularity levels of testing
+-
+unit testing, integration testing,system testing,regressions testing
+--
+what kinds of values should be used for testing
+-
+valid,invalid,boundary,extreme
+--

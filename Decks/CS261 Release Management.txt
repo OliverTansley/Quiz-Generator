@@ -1,0 +1,51 @@
+--
+how does version control Software help with Release Management
+-
+Mitigates human error - user commits erroneous code at last minute,
+Mitigates technical error - laptop/server dies/gets stolen,
+--
+what three environments typically exist for Software Development
+-
+master,Development, and feature
+--
+what is system building
+-
+the final linking together of all components of the code base
+--
+what kind of features can we expect from build tools
+-
+Build Script Generation,Version Control System Integration,Minimal Recompilation,Executable System Creation,Test Automation,Reporting,Documentation Generation
+--
+what platforms do we have to consider when building a system
+-
+The Development System,The Build Server,The Target Environment
+--
+why do we continually integrate our system in agile Methodologies
+-
+Building becomes cheaper as only small changes are committed each time
+--
+why does continous Integration not always work
+-
+Big systems may take hours to build,If the development environment is very different to the target
+environment
+--
+what are the two different catagories of data our systems will deal with
+-
+dummy/stub data, real/production data
+--
+what things need to be checked during the transition from dummy to real data
+-
+Availability of data sources,Constraints around data acquisition,Additional overheard of data processing,Long-term storage/backups/archives,Data sharing/access constraints.
+--
+what checks should be made regarding release Management
+-
+Dependencies should be explicit and recorded,Physical distribution should be hidden (and not hardwired)
+and via multiple channels,The release process should require minimal effort on the
+part of the developer and client,The scope of the release (to whom) should be controllable
+(also useful to record downloads),Sufficient descriptive information should be available,Interdependent systems should be retrievable as a group,
+Unnecessary retrievals should be avoided,A history should be kept (release log)
+--
+what factors need to be considered when making changes to a built system
+-
+The consequences of not implementing the change,The benefits of change,The number of users affected by the change,The costs of making the change,The product release cycle
+--
