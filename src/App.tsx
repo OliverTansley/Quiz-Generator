@@ -70,7 +70,7 @@ function App() {
             </VStack>
           ) : (
             <Text color={"gray.300"} paddingTop={8} fontSize={"6xl"}>
-              Select A topic!
+              Select a topic!
             </Text>
           )}
           <Spacer />
