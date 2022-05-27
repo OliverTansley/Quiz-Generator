@@ -23,7 +23,7 @@ AI Planning with Certainty
 -
 AI Knowledge Representation
 -
-AI Planning with Uncertainty
+AI Planning With Uncertainty
 -
 ES2E3 Digital Design Flow
 -
