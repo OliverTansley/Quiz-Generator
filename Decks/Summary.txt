@@ -35,15 +35,11 @@ CS261 Agile Methodologies
 -
 CS261 Requirements Analysis
 -
-CS261 Early Team Organisation
--
 CS261 System Design 1
 -
 CS261 System Design 2
 -
 CS261 System Design 3
--
-CS261 Project Management
 -
 CS261 Implementation 1
 -
@@ -58,6 +54,4 @@ CS261 Dependability
 CS261 System Testing 1
 -
 CS261 System Testing 2
--
-CS261 Release Management
 -
