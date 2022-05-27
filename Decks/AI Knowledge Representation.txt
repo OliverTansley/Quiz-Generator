@@ -1,0 +1,61 @@
+--
+why do we represent Knowledge 
+-
+human/intelligent thinking is conditioned on Knowledge
+--
+what is a proposition
+-
+a statement which is either true or false
+--
+what are the components of a definitive clause
+-
+the body, a logical formula, and the head, a variable which stores the result of the logical formula
+--
+what is an expert system
+-
+a system that performs inference using a Knowledge base
+--
+How does the MYCIN system work
+-
+patient data and expert data are used to build the Knowledge base, a consultation program performs a tree search to determine a diagnosis from the kb
+--
+what are formal systems comprised of
+-
+an alphabet, axioms, grammer (manipulations)
+--
+what are alphabets replaced by in Knowledge expression
+-
+a vocabulary that consists of, objects in the domain, attributes for each object, values for each attribute
+--
+what is working Memory
+-
+a store of facts and propositions, described using the vocabulary and grammer of the system
+--
+what is the structure of a production rule
+-
+antecedent: conditions to execute the rule, consequent: the changes made when executing the rule
+--
+what are the two types of inference control
+-
+Global control:domain independant control,Local control: domain specific control
+--
+what are the set of rules fired in a kb known as
+-
+an inference chain
+--
+what is the result of an inference chain
+-
+a logical proof/solution
+--
+what are the two types of chaining
+-
+Forward chaining:facts continue to be infered even if unrelated to the goal,Backward chaining: data is only used if it is related to the goal
+--
+what is an askable clause
+-
+when our kb doesnt contain needed information we can ask the user to provide it
+--
+what are the four types of non syntactic errors in kb
+-
+An incorrect answer is produced,An answer was not produced ,infinite loop,system asks irrelevant questions
+--

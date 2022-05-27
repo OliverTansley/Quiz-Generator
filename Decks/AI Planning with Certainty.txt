@@ -1,0 +1,201 @@
+--
+what is a knowledge base
+-
+set of sentences in a formal knowledge representation language (a database of facts or beliefs)
+--
+what is an inference engine
+-
+a mechanism for reasoning about those beliefs
+--
+what are the standard names for querying and appending to knowledge base
+-
+ask and tell
+--
+what do knowledge based agents do
+-
+accept tasks in the form of goals, react to changes in the world by updating knowledge,infer unseen properties in the world from perceptions
+--
+what are the three levels of knowledge based agents
+-
+knowledge level,logical level,Implementation level
+--
+what is the knowledge level
+-
+what is known by the agent regardless of Implementation
+--
+what is the logical level
+-
+knowledge encoded in formal sentences
+--
+what is the Implementation level
+-
+datastructures used in the kb, and algorithms which manipulate them
+--
+how does a simple knowledge based agent work
+-
+each iteration you tell the knowledge base perceptions, and ask what action to perform
+--
+what level of detail is hidden by the TELL and ASK functions
+-
+the logical level
+--
+what are logics
+-
+formal languages for representing information with which conclusions can be drawn
+--
+what is syntax
+-
+defines the sentences in the language
+--
+what are semantics
+-
+the meaning of sentences
+--
+what is entailment
+-
+a knowledge base (kb) entails fact a if, in every world where kb is true a is also true
+--
+what is soundness
+-
+i is sound if whenever KB |-i α, it is also true that KB |= α, where i is the inference procedure (correctness)
+--
+what is completeness
+-
+i is complete if whenever KB |= α, it is also true that KB |-i α, where i is the inference procedure (explorative)
+--
+what is inference by enumeration
+-
+generate all possible combinations of variables in the knowledge base and check that the knowledge base entails the new knowledge
+--
+what is the problem with simple knowledge based agents
+-
+there are often too many rules to store
+--
+what are the two components of planning agents
+-
+states and goals (sentences), actions (description of preconditions and effects)
+--
+what is subgoaling
+-
+breaking down a large goal into smaller goals so that partial solutions can be combined for efficiency
+--
+what are the steps of simple plan agent
+-
+update knowledge base, generate a goal and construct plan,execute plan 
+--
+what is situation calculus 
+-
+a way of describing changes in first order logic
+--
+how are new situations generated
+-
+by actions performed on previous situations
+--
+what are fluents
+-
+functions and predicates that change with time
+--
+what are eternals
+-
+functions and predicates that dont change
+--
+what are possibility axioms
+-
+descriptions of when it is possible to perform an action
+--
+what are effect axioms
+-
+effects caused by axioms
+--
+what are frame axioms
+-
+descriptions of features of the world that will NOT change
+--
+what is the frame problem
+-
+idk i dont understand it
+--
+what are succesor state axioms
+-
+descriptions about things that are true due to previous states
+--
+why do we need a restricted language
+-
+to represent actions such that there are less possible solutions to search through
+--
+what are the components of an operation
+-
+preconditions, actions, effects
+--
+what is an open condition
+-
+a condition which is not yet fulfilled
+--
+what effect do operators have on partial plans
+-
+add a link from an existing action to open condition,add a step to fulfil a condition,order one step with respect to another
+--
+what is a plan comprised of
+-
+a set of steps (operators),ordering constraints on steps,set of variable bindings,set of causal links
+--
+describe how partial order planning works
+-
+Start with a minimal partial plan,Each iteration find a step to achieve a precondition,Record causal link to the newly achieved precondition,Resolve any threats to causal links,If fail to find operator or resolve threat to causal link then backtrack.
+--
+what is a threat/clobberer
+-
+an intervening step that changes a condition that is required for proceding steps in a plan
+--
+how do we resolve clobbering
+-
+by ensuring the order of steps does not undo required causal links
+--
+what is the sussman anomaly
+-
+when planners focus on one conjunct at a time, resulting in non optimal solutions
+--
+what things cannot be expressed with the strips language
+-
+heirarchical conditions, complex conditions,time, or resources
+--
+how do heirarchical conditions aid planners
+-
+planning can be done at a level higher than there affectors eg [GO(Home)] => [move(1cm), turn(1deg), ...]
+--
+what additions can we make to the POP language
+-
+conditional effects,negated goals,Disjunctive preconditions,Disjunctive effects, universally quantified preconditions,
+--
+what do we do when plans require finite resources
+-
+assume minimal resources, avoid consuming them at all costs
+--
+how is time treated in a plan
+-
+as a resource
+--
+how do we resolve non-determinism and partially observable worlds in planning
+-
+conditional planning and, monitoring and replanning
+--
+what is a prameterised plan
+-
+a plan in which exact actions are not known until runtime
+--
+what is a maintainance goal
+-
+a goal which includes preserving features of the original state
+--
+what ways can a plan fail
+-
+Bounded indeterminacy: unexpected effects of actions can be enumerated,Unbounded indeterminacy: set of possible outcomes too large to enumerate
+--
+what are the two replanning strategies
+-
+on failure replan from scratch, replan to join back to the original plan, Implements a loop until finished behaviour
+--
+what are some alternatives to replanning
+-
+coercion, abstraction, aggregation
+--

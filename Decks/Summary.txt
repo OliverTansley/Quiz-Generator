@@ -19,6 +19,12 @@ AI Local Search
 -
 AI Adversarial Search
 -
+AI Planning with Certainty
+-
+AI Knowledge Representation
+-
+AI Planning with Uncertainty
+-
 ES2E3 Digital Design Flow
 -
 ES2E3 Verification

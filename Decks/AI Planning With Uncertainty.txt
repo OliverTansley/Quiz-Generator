@@ -1,0 +1,102 @@
+--
+what are the problems with logicism
+-
+it cannot cope with uncertainty, real world doesnt always deal with logical implications, certainty factors has no real theoretical backing
+--
+what is probability
+-
+reasoning about experiments that have a set of distinct outcomes
+--
+where do probability numbers come from
+-
+frequentist view (repeated experiments), objectivist view (tendancies in behavior), the subjectivist view (expert opinions)
+--
+what is the kolmogorov definition of probability
+-
+Sample space Ω, with finite set of outcomes that are mutally exclusive and exhaustive, each outcome/state has a real value assigned as the probability
+--
+what is an event in set-theoretic probability
+-
+a collection of states/outcomes that is a subset of Ω, the probability is the sum of the probabilities of the subset
+--
+what is a random variable
+-
+a function that can assume any value from a subset of Ω
+--
+what is a primitive proposition
+-
+an assignment of a variable, or comparison between two variables
+--
+what is a proposition
+-
+multiple primitive propositions combined with logical connectives
+--
+how do we calculate the probability of a proposition
+-
+sum the probabilities of states in Ω where the proposition is true
+--
+what is the expected value
+-
+the sum of possible values weighted by their probabilities 
+--
+what is variance
+-
+the deviation of values from the expected value
+--
+what are the three types of random variable
+-
+discrete, continous, binary (special case of discrete)
+--
+what is a probability distribution
+-
+a function over a random variable that assigns a probability to each corresponding outcome
+--
+what is a joint probability distribution
+-
+a function that specifies the probability of multiple random variable assignments
+--
+how do you determine a joint probability distribution
+-
+take the product of the p.d's of the included variables
+--
+what are the different axioms of probability
+-
+AND , OR , and NOT
+--
+what does if mean if events a and b are disjoint
+-
+P(a AND b) = 0
+--
+what is P(A|B)
+-
+probability of A given B, P(A AND B)/P(B)
+--
+what is the product rule
+-
+P(a AND b) = P(a|b) * p(b)
+--
+what is bayes rule
+-
+P(A|B) = P(B|A)*P(A)/P(B)
+--
+what is maginalisation
+-
+given a joint probability distribution P(a,b), we can calculate p(ai) by summing p(ai,bj) over all bj
+--
+what is a continous probability distribution
+-
+a function that can be integrated to give the probability of a random variable falling with in a given range
+--
+what is the general procedure for probabalistic inference
+-
+X is query var, E is evidence,Y is unobserved vars
+sum P(X,e,y) for all y, and divide by p(e).
+--
+what is conditional independance
+-
+when two variables are independant given another condition is true, otherwise they are dependant
+--
+what is the markov condition
+-
+given a graph G=<V,E>. the markov condition is satisfied if for each variable x, it is conditionally independant to all its non descendants given the set of all its parents
+--
