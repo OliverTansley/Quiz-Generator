@@ -59,3 +59,33 @@ what are the four types of non syntactic errors in kb
 -
 An incorrect answer is produced,An answer was not produced ,infinite loop,system asks irrelevant questions
 --
+what is conflict resolution
+-
+the method for choosing which rule should be fired, given multiple available rules
+--
+what are different conflict resolution approaches
+-
+fire rules in order they arrive, fire the most specific rule,only allow a rule to fire once on the same data (preventing loops in inference), use of meta knowledge
+--
+what is meta knowledge
+-
+knowledge about knowledge
+--
+what is the RETE algorithm
+-
+construction of a network of antecedents to more efficiently determine what rules can be fired, a token is passed through the network, and a corresponding rule is fired, the network is then updated
+with any new antecedents, and the conflict set is updated from the previous iteration
+--
+what are some pros of rule based systems
+-
+Easy mapping between expert knowledge and format of rules,Each rule represents one piece of knowledge,Separation of knowledge from the processing/control structures,Ability to represent and reason with uncertain knowledge,Exhaustive search through all rules during each inference cycle
+--
+what is the con of rule based systems
+-
+The Knowledge Acquisition Bottleneck: System does no independent learning
+--
+what are the two methods of assumption based learning
+-
+Abduction - An agent makes assumptions to explain observations,
+Default Reasoning - An agent makes assumptions of normality to make predictions,
+--

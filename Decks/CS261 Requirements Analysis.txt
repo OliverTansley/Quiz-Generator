@@ -14,7 +14,7 @@ requirements designed to support the customer
 what are D facing requirements
 -
 requirements designed to support the developer
--- 
+--
 what should C requirements do
 -
 Define how the system should work from a user’s view,
