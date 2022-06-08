@@ -1,0 +1,45 @@
+--
+what are embedded systems
+-
+Embedded software is software integrated with physical processes. The technical problem is managing time and concurrency in computational systems.
+--
+what are the different measurements of dependability
+-
+availability,reliability,maintainability,safety,security
+--
+what ways do embedded systems need to be efficient
+-
+code size,run-time,weight,cost,energy
+--
+what are the different types of embedded system
+-
+ASIC,FPGA,DSP (digital signal processor),MPU (microprocessor unit)
+--
+why do we need to minimise energy consumption
+-
+mobile systems have restricted energy,cooling purposes,cooler temps == longer lifespan
+--
+what are the pros of asics
+-
+very fast and energy efficient, large numbers can be sold
+--
+what are the cons of asics
+-
+long design time,lack of flexibility,high initial cost
+--
+describe dynamic power management
+-
+when machines operate in different states such as idle, running and sleeping depending on thier usage
+--
+what are FPGAs
+-
+feild programmable gate arrays, are configurable hardware
+--
+in what ways must Embedded system memory be efficient
+-
+speed,energy,size,cost,volatility,persistance
+--
+what is scratchpad memory
+-
+high speed memory similar to cache except more energy efficient per access
+--

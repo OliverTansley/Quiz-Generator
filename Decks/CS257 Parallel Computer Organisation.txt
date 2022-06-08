@@ -1,0 +1,73 @@
+--
+what are the four members of flynns taxonomy
+-
+SISD,SIMD,MISD,MIMD
+--
+What is SIMD
+-
+single instruciton many data, a single instruction is issued by the control unit and different processing units execute it on different data
+--
+what is a vector computer
+-
+computers which contain instructions capable of being operated on an array of integers (known as vectors)
+--
+what is an array computer
+-
+computers with a large amount of sperate processing elements
+--
+What is MIMD
+-
+multiple instruciton multiple data
+--
+what are the two types of MIMD processors
+-
+shared memory and distributed memory
+--
+what is the advantage to distributed memory processors
+-
+there is no memory contention within data memory, however, the memories do need to communicate
+--
+what are the different interconection structures
+-
+shared bus,Cross bar switch matrix,static (dedicated links),multistage switching networks,CLOS networks,Cell based networks
+--
+what is shared bus
+-
+when a single bus is a shared resource between processing elements
+--
+what are the problems with shared bus
+-
+single point of failure, bus contention
+--
+what is a cross bar switch matrix
+-
+a row of processing elements is connected to a column of processing elements in a matrix configuration
+--
+what are the advantages to a cross bar switch matrix
+-
+data can be sent to multiple processing elements at once,less contention
+--
+what is static links
+-
+processing elements connected in a fixed manner, there are many possible topologies
+--
+what are the different topologies of staticly linked pe's
+-
+linear array, mesh,ring,star,hypercube,complete connection
+--
+what are multistaging switch networks
+-
+connections between processing elements that contain components which change the active connections at runtime
+--
+what are the two types of multistaging switch networks
+-
+cross-bar switch based, cell based
+--
+what attributes of processing element networks do we want to achieve
+-
+non-blocking and full access
+--
+what is a corss bar switch
+-
+a component that selects what inputs to match to what outputs with some kind of addressing logic
+--

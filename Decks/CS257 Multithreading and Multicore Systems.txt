@@ -1,0 +1,72 @@
+--
+what are MIPS
+-
+millions of instructions per second
+--
+what is multithreading
+-
+(conceptually) dividing the instruction stream into smaller streams known as threads
+--
+what is explicit multithreading
+-
+Concurrently execute instructions from explicitly different threads by interleaving instructions on shared pipelines or parallel execution on parallel
+pipelines
+--
+what is implicit multithreading
+-
+the concurrent execution of multiple threads extracted from a single sequential program
+--
+what are the approaches to explicit multithreading
+-
+interleaved (swap after each cycle),blocked (swap at a delay),simultaneous multithreading (Superscalar processor),chip multiprocessing (entire cpu is replicated on a single chip)
+--
+which methods actually execute threads Concurrently
+-
+simultaneous multithreading and chip multiprocessing
+--
+what is a multicore system
+-
+when all the resources of a processor (core) are replicated on one peice of silicon (die)
+--
+what are some of the factors motivating multicore systems
+-
+limitations in: transistor density, power consumption, and frequency. 
+--
+what is pollacks rule
+-
+performance increase is roughly proportional to the square root of increase in complexity
+--
+what are the main three variables of multicore Organisation
+-
+number of cores on chip, number of levels in cache memory, amount of cache memory shared
+--
+what are the advantages of having shared L2 cache in multicore systems
+-
+when multiple threads want to get a new value from main memory its only loaded into L2 once, data isnt replicated as much,good replacement algorithms can dynamically provide more cache
+to less tomporally local threads, interprocessor communication is easily implemented using shared memory
+--
+what is a cluster
+-
+a group of interconnected whole computers working together as a unified computing resource that can create the illusion of being one machine
+--
+what are the benefits of clusters
+-
+absolute scalability,incremental scalability,high availability,superior price/performance
+--
+what is Uninform memory access
+-
+All processors have access to all parts of main memory using loads and stores,
+Access time to all regions of memory is the same,
+Access time to memory for different processors is the same
+--
+what is non-Uninform memory access
+-
+All processors have access to all parts of main memory using loads and stores,
+Access time of processor differs depending on which region of main memory is being accessed,
+Different processors access different regions of memory at different speeds,
+--
+what are the motivations for NUMA
+-
+There are limits to the number of cores that can be put together,
+Architecture dependant
+--

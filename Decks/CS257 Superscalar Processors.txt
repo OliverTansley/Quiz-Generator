@@ -11,3 +11,11 @@ what is the degree of a Superscalar Processor
 -
 The number of replications before the window
 --
+what is a non-uniform Superscalar processor
+-
+a Superscalar processor, where stages following the window are not replications of the base pipeline
+--
+what is a super-pipelined processor
+-
+where internal clocks run at twice the speed allowing 2 instructions to be fetched within one clock cycle
+--

@@ -1,0 +1,64 @@
+--
+what are symmetric multiprocessors
+-
+Two or more similar processors of comparable capacity, and which share memory
+--
+what are the advantages to using SMP
+-
+performance boost, greater availability, incremental scaling
+--
+what is a cluster
+-
+independant computers capable of collaborating on a problem as if they were one machine
+--
+what is cluster middleware
+-
+a Software layer that provides a unified system image to the user
+--
+what services/functions are desireable from cluster middleware
+-
+Single entry point,
+Single file hierarchy,
+Single virtual networking,
+Single memory space,
+Single job-management system,
+Single user interface,
+Single I/O space,
+Single process space,
+Check-pointing: A function periodically saves the process state and the intermediate
+computing results, to allow rollback recovery after a failure,
+Process migration: This function enables load balancing,
+--
+what are the advantages of smps over clusters
+-
+The SMP approach is easier to manage and configure; much closer to the original single-processor
+model for which the application was written,SMPs also take up less space and consume less power
+--
+what are the advantages of clusters over smps
+-
+clusters dominate the high-performance server market,Far superior to SMPs in terms of incremental and absolute scalability, and in terms of availability
+--
+what are the alternatives to SMPs and clusters
+-
+Uniform Memory Access: multiprocessor Organisation where all memory access times are equal (really a SMP Organisation),
+Non-Uniform Memory Access: multiprocessor where all memory accesses are different times deterministically,
+Cache-coherent NUMA (CC-NUMA): A NUMA system in which cache coherence is maintained
+among the caches of the various processors,
+--
+what is the objective of cache coherent NUMA
+-
+to maintain a transparent system-wide memory while permitting multiple multiprocessor nodes, each with its own bus or internal interconnect system.
+--
+what are the pros of cache coherent NUMA 
+-
+can deliver effective performance at higher levels of parallelism than SMP without requiring major software changes,
+Bus traffic on any individual node is limited to a demand that the bus can handle,
+--
+what are the cons of cache coherent NUMA
+-
+If many of the memory accesses are to remote nodes, performance begins to break down,
+Does not transparently look like an SMP,
+Software changes will be required to move an operating system and applications from an SMP to
+a CC-NUMA system,
+reliance on interconnect network
+--

@@ -9,6 +9,28 @@ CS257 Pipeline Design
 -
 CS257 Superscalar Processors
 -
+CS257 Exploiting Instruction Level Parallelism
+-
+CS257 Parallel Computer Organisation
+-
+CS257 Cache Coherance
+-
+CS257 Exploiting Data level parallelism
+-
+CS257 Multithreading and Multicore Systems
+-
+CS257 Exploiting Thread Level Parallelism
+-
+CS257 High performance systems
+-
+CS257 IO Mechanisms
+-
+CS257 RAID and Storage Area Networks
+-
+CS257 Embedded Systems
+-
+CS257 Hardware Security
+-
 AI Uninformed Search
 -
 AI Informed Search

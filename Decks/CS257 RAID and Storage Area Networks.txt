@@ -1,0 +1,74 @@
+--
+what does RAID stand for
+-
+Redundant arrays of independant disks
+--
+what are the feaures of raid arrays
+-
+data stripping, Redundancy
+--
+what is datastriping
+-
+data is transparently distributed over multiple disks, they appear as one large disk.
+data can be serviced in parrallel by sending multiple items of data over differnet disks, or different sections of data
+over multiple disks
+--
+how does redundancy help our IO performance
+-
+used to restore disks in the event of disk failures
+--
+what is raid level 0
+-
+no redundancy is included, has best write performance as data doesnt have to be written multiple times,
+any disk failure will result in a loss
+--
+what is raid level 1
+-
+mirroring, all data is stored on a separate disk. has better read performance as the disk with the lowest rotation delay can be selected. 
+uses twice as much hdd storage so is expensive
+--
+what is raid level 2
+-
+redundancy through hamming codes, hamming codes are able to correct single bit errors and detect double bit errors, also requiring less
+storage space.
+--
+what is raid level 3
+-
+bit interleaved parity, a disk of parity bits is stored for a set of bits in all disks, which can be used to reconstruct data when a failure occurs.
+only one request can be admitted at a time so performance can suffer in high transaction environment.
+--
+what is raid level 4
+-
+strips dedicated to storing the parity bit for a select number of strips,
+when a small write request is performed the differences are noted in the parity strip incurring an overhead,
+when large requests are made the new parity is found by xoring the strips together
+--
+what is raid level 5
+-
+block interleaved distributed parity, parity strips are stored on different drives, has one of the best read and 'large write' performances.
+--
+what is raid level 6
+-
+dual redundancy, parity strips and reed soloman stripes are included for each set of strips to increase data loss tolerance
+--
+what are the advantages of SSD 
+-
+High-performance input/output operations per second (IOPS),Durability,Longer lifespan,Lower power consumption,Quieter and cooler running capabilities,Lower access times and latency rates
+--
+what are the benefits of storage area networks
+-
+centralised storage management,operational flexibility,storage pooling - higher utilisation
+--
+what are the different kinds of failures that can occur
+-
+disk drive failure, power supply or fan failure,storage controller failure,System unit failures,interface failures
+--
+what is a flash copy and how can they be implemented
+-
+produces an instant copy of data while application is running, copy on write algorithm
+--
+what are the two kids of remote copy
+-
+synchronous: data is copied before completing host write instruction,
+asynchronous: data is copied after completing host write instruction
+--

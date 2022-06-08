@@ -1,0 +1,46 @@
+--
+why is a simple write through policy not enough to ensure cohernace in distributed PE's
+-
+the write through policy will only update main memory
+--
+what are the possible cache cohernace solutions
+-
+Shared caches,Non-cachable items,Broadcast write mechanism,Snoop(y) bus mechanism,Directory methods,MESI protocol
+--
+describe Broadcast write
+-
+every cache write request sent to all other caches, copies in other caches are either over written or declared invalid
+--
+what are the disadvantages of Broadcast write 
+-
+increased memory transactions, waste of bandwidth
+--
+describe snoop busses
+-
+a connection made to the system bus from each cache controller which detects if a write signal is being made and will invalidate or overwrite
+copies of the modified data
+--
+what are Directory methods
+-
+IDK REVISE AGAIN LOL
+--
+what does mesi stand for
+-
+modified,Exclusive,Shared,invalid
+--
+what does modified mean
+-
+the cache block is not consistent with main memory, and will eventually be written to main memmory when next needed
+--
+what does Exclusive mean
+-
+the cache block only exists within one cache
+--
+what does shared mean
+-
+the cache block exists in multiple caches and is consistent
+--
+what does invalid mean
+-
+the cache block is not consistent and has been discareded
+--

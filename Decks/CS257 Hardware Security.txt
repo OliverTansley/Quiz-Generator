@@ -1,0 +1,32 @@
+--
+what is USB
+-
+universal serial bus, provides a standard port for data transfer and low energy 
+--
+what is a USB killer
+-
+a usb device which uses a capacitor to load high voltage onto data pins and break a machine
+--
+what is the problem with DMACs
+-
+they provide direct access to the physical Memory addresses: FireWire express card,Thunderbolt
+--
+how do we mitigate this issue
+-
+prevent physical access, signed drivers to verify the operation of the device, IOMMUs to implement virtual addr for IO
+modify OS kernels to disable DMACs but permit other functions.
+--
+what is a timing attack
+-
+google it 
+--
+what is kernal address space layout randomisation
+-
+placing kernel reserved info in unknown addrs to avoid kernal data leaks
+--
+explain how meltdown operates
+-
+--
+explain how spectre works
+-
+--

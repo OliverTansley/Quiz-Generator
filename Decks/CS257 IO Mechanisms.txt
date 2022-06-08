@@ -1,0 +1,106 @@
+--
+what are the two addressing modes available for io devices
+-
+memory mapped and isolated
+--
+describe memory mapped io
+-
+the same bus is used to address both memory and IO devices, and there are dedicated memory locations for IO devices
+--
+what are the advantages of memory mapped IO
+-
+simple to implement,less internal logic is required therefore the fabrication of the cpu can be cheaper, all addressing modes
+available to the cpu are also available to IO
+--
+what are the disadvantages of memory mapped IO
+-
+portions of the memory address space must be reserved for IO devices,less of a problem for 64bit machines
+--
+describe isolated IO
+-
+bus is equiped with a Input and Output command line, as well as read and write lines, command lines specify if an address is 
+referring to an input or output device
+--
+what is the advantage and disadvantage of isolated IO
+-
+Full range of (logical) addresses are available for memory and I/O,
+Additional hardware and (minor) overheads of command lines
+--
+why do we need to synchronise IO devices
+-
+because they operate much slower than the cpu
+--
+describe busy wait polling
+-
+when the cpu continously tests if an IO device is ready or not
+--
+how can we improve busy wait polling
+-
+by interleaving useful processing between checks
+--
+what are the advantages to busy wait polling
+-
+simple to implement at both a software and hardware level
+--
+what are the disadvantages of busy wait polling
+-
+wastes lots of power,interleaved processing can lead to significant delays in IO processing
+--
+what are interrupts
+-
+when a command forces the cpu to context switch to the interrupt service routine
+--
+what are the steps of an interrupt
+-
+cpu completes current instruction, push PC and status registers onto the stack,load addr of interrupt handler, service interrupt,
+pop pc and status registers from stack, load pc and status registers into the cpu
+--
+what are the advantages of interrupt IO
+-
+fast response,No wasted time or power
+--
+what are the disadvantages of interrupt IO
+-
+all data transerfers still controlled by the cpu,
+more complex hardware and software required
+--
+why do we want direct memory access
+-
+the cpu is a bottleneck for IO devices, we want to directly read IO data into memory
+--
+describe what a DMAC is
+-
+direct memory access controller is a device dedicated to transferring large amounts of data to memory
+--
+what information does the DMAC need to operate 
+-
+read/write status,I/O device addr,the base address to read data into,the number of words to read
+--
+what are the different kinds of DMAC Organisation
+-
+single bus detatched,single bus integrated,io bus
+--
+describe the single bus detatched Organisation
+-
+the DMAC shares the same system bus and uses programmed IO to exchange data between memory and IO
+--
+describe the signle bus integrated Organisation
+-
+io devices are connected to the system bus through the dma module, reducing cycles required to transfer memory
+--
+describe the io bus Organisation
+-
+all io devices are connected to an IO bus which connects to the dmac
+--
+what are the two modes of operation for the DMAC
+-
+cycle stealing & burst mode
+--
+describe cycle stealing operation
+-
+the dmac uses the system busses when they are not in operation, by grabbing unused memory cycles
+--
+describe burst mode operation
+-
+the dmac "locks" the cpu and makes use of the system busses to transfer a large amount of data, will stop if a higher priority interrupt is recieved
+--
